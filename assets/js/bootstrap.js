@@ -1149,7 +1149,6 @@
   const Default$b = {
     interval: 5000,
     keyboard: true,
-    pause: 'hover',
     ride: false,
     touch: true,
     wrap: true
@@ -1158,7 +1157,6 @@
     interval: '(number|boolean)',
     // TODO:v6 remove boolean support
     keyboard: 'boolean',
-    pause: '(string|boolean)',
     ride: '(boolean|string)',
     touch: 'boolean',
     wrap: 'boolean'

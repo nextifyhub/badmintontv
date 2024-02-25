@@ -4,10 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BadmintonTV</title>
-
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Test File</h1>
+
+    <!-- START  NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light p-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand logo text-uppercase" href="index.html">
+                <img src="assets/img/Logo.png" alt="" height="60" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="assets/img/hamburger.png" alt="" height="50">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-center" id="navbar-navlist">
+                    <li class="nav-item">
+                        <img src="assets/img/USA-Flag.png" alt="USA Flag" height="20">
+                    </li>
+                    <li class="nav-item m-2">
+                        <a class="btn btn-base b-animate-4" href="#"> Subscribe </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-base b-animate-4" href="#"> Sign In</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- Slider Start  -->
+    <section class="home-slider">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image:url('assets/img/Banner-2.png')";>
+                    <div class="carousel-caption text-left">
+                        <div>
+                            <h1 class="text-white my-4">2024 China Masters</h1>
+                            <a class="btn btn-base b-animate-4" href="service.html"> 7 Day Free Trail</a>
+                        </div>
+                    </div>
+              </div>
+              <div class="carousel-item" style="background-image:url('assets/img/Subs\ Background.jpg')";>
+                <div class="carousel-caption text-left">
+                    <div>
+                        <h1 class="text-white my-4">2024 China Masters</h1>
+                        <a class="btn btn-base b-animate-4" href="service.html"> 7 Day Free Trail</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Slider End  -->
+
+
+    <!-- START SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-8">
+                    <div class="title-box text-center">
+                        <h5 class="sub-title text-primary text-uppercase">Best Services</h5>
+                        <h3 class="mt-3 fw-normal">Creative Services with & digital business</h3>
+                        <div class="title-border"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-3">
+                <div class="col-lg-4">
+                    <div class="service-box mt-4">
+                        <div class="services-icon">
+                            <i class="pe-7s-diamond"></i>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-3 f-17 mt-4">Digital Design</h5>
+                            <p class="text-muted mb-0"> Some quick example text to build on the card title and make up
+                                the bulk of the card content Moltin gives you the platform.</p>
+                            <div class="mt-3">
+                                <a href="" class="text-primary f-14 fw-normal">Learn More <i
+                                        class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-box mt-4">
+                        <div class="services-icon">
+                            <i class="pe-7s-science"></i>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-3 f-17 mt-4">Awesome Support</h5>
+                            <p class="text-muted mb-0">It is a paradisematic country, in which roasted parts of
+                                sentences fly into your mouth leaeve Finibus Bonorum for the far World.</p>
+                            <div class="mt-3">
+                                <a href="" class="text-primary f-14 fw-normal">Learn More <i
+                                        class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-box active mt-4">
+                        <div class="services-icon">
+                            <i class="pe-7s-display2"></i>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-3 f-17 mt-4">Unlimited Colors</h5>
+                            <p class="text-muted mb-0"> Credibly brand standards to compliant users without extensible
+                                services.
+                                Anibh euismod tincidunt words ut laoreet.</p>
+                            <div class="mt-3">
+                                <a href="" class="text-primary f-14 fw-normal">Learn More <i
+                                        class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-box mt-4">
+                        <div class="services-icon">
+                            <i class="pe-7s-news-paper"></i>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-3 f-17 mt-4">Truly Multipurpose</h5>
+                            <p class="text-muted mb-0">Even the all-powerful Pointing has no control about the blind
+                                texts it is an almost unortho exact original form graphic.</p>
+                            <div class="mt-3">
+                                <a href="" class="text-primary f-14 fw-normal">Learn More <i
+                                        class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-box mt-4">
+                        <div class="services-icon">
+                            <i class="pe-7s-piggy"></i>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-3 f-17 mt-4">Strategy Solutions</h5>
+                            <p class="text-muted mb-0"> Separated they live in Bookmarksgrove right at the coast
+                                of the Semantics, a large lange ocean necessary regelialia.</p>
+                            <div class="mt-3">
+                                <a href="" class="text-primary f-14 fw-normal">Learn More <i
+                                        class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-box mt-4">
+                        <div class="services-icon">
+                            <i class="pe-7s-plane"></i>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="mb-3 f-17 mt-4">Strategy Solutions</h5>
+                            <p class="text-muted mb-0">Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t
+                                listen. She packed her predefined chunks seven versalia.</p>
+                            <div class="mt-3">
+                                <a href="" class="text-primary f-14 fw-normal">Learn More <i
+                                        class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- END SERVICES -->
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
 </body>
 </html>

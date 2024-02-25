@@ -1,12 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-body {
-  font-family: "DM Sans", sans-serif !important;
-  font-size: 15px;
-  line-height: 26px;
-  color: #121f3e;
-  font-weight: 400;
-}
 
+
+/*---------------------------------------
+    ## Default Setting
+---------------------------------------*/
+
+:root {
+    --main-color: #87BFCF;
+    --heading-color: #2e3440;
+    --paragraph-color: #4c566a;
+    --body-font: "DM Sans", sans-serif;
+    --heading-font: "Playfair Display", serif;
+    --body-font-size: 16px;
+    --line-height30: 1.5;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-x: hidden;
+    font-family: var(--body-font);
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    -moz-osx-font-smoothing: grayscale;
+    /* Firefox */
+    -webkit-font-smoothing: antialiased;
+    /* WebKit  */
+  }
+  
+  body {
+    margin: 0;
+    color: var(--paragraph-color);
+    overflow-x: hidden;
+    font-family: var(--body-font);
+    line-height: var(--line-height30);
+    font-size: var(--body-font-size);
+  }
 h1,
 h2,
 h3,
@@ -16,4 +49,251 @@ h6 {
   font-family: "Playfair Display", serif !important;
   font-weight: 600;
   line-height: 1.4;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+img {
+    max-width: 100%;
+}
+button:hover,
+button:active,
+button:focus {
+  outline: 0;
+}
+
+
+
+/*---------------------------------------
+    ## Button
+---------------------------------------*/
+.btn {
+    height: 50px;
+    line-height: 43px !important;
+    padding: 0 30px;
+    border-radius: 50px !important;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #4D576B;
+    font-size: 18px;
+    font-family: var(--heading-font);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-weight: 500;
+    border-radius: 0px;
+    z-index: 0;
+  }
+  .btn:focus, .btn:active {
+    outline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .btn:hover {
+    background: #4285F4;
+  }
+  .btn:hover:after {
+    height: 100%;
+    width: 135%;
+  }
+  .btn:after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    z-index: -1;
+    height: 100%;
+    left: -35%;
+    top: 0;
+    -webkit-transform: skew(30deg);
+    transform: skew(30deg);
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    width: 0;
+  }
+  
+  .btn-base {
+    color: #000;
+    background: var(--main-color);
+    line-height: 60px;
+  }
+  .btn-base:active, .btn-base:focus, .btn-base:hover {
+    color: #fff;
+    background: var(--main-color);
+  }
+  .btn-base:active:after, .btn-base:focus:after, .btn-base:hover:after {
+    background: var(--main-color);
+  }
+  
+  .btn-white {
+    color: var(--heading-color);
+    background: #fff;
+    line-height: 60px;
+  }
+  .btn-white:active, .btn-white:focus, .btn-white:hover {
+    color: #fff;
+    background: var(--main-color);
+  }
+  .btn-white:active:after, .btn-white:focus:after, .btn-white:hover:after {
+    background: var(--main-color);
+  }
+  
+  .btn-border-white {
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    line-height: 48px;
+  }
+  .btn-border-white:hover, .btn-border-white:focus {
+    color: #fff;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+  }
+  
+/*---------------------------------------
+    ## Header
+---------------------------------------*/
+.navbar{
+  border-bottom: 1px solid #9190902f;
+}
+
+.navbar-custom {
+  background-color: transparent;
+  padding: 25px 0px;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+  margin-bottom: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-custom .navbar-toggler {
+  color: #ffffff;
+  font-size: 25px;
+  padding: 0px;
+}
+
+.navbar-custom.nav-sticky {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  padding: 20px 0px;
+}
+
+.navbar-custom.nav-sticky .custom-menu {
+  box-shadow: none;
+}
+
+.logo .logo-light {
+  display: inline-block;
+}
+.logo .logo-dark {
+  display: none;
+}
+
+  
+/*---------------------------------------
+    ## Slider
+---------------------------------------*/
+
+
+  #carouselExampleSlidesOnly {
+    position: relative;
+  }
+
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+  }
+
+  .carousel-caption {
+    z-index: 2;
+  }
+.carousel-caption h1{
+  font-size: 4rem;
+}
+
+.home-slider {
+  position: relative;
+}
+
+.home-slider .carousel-control-next,
+.carousel-control-prev {
+  width: 6%;
+}
+
+.home-slider .carousel-item,
+.home-slider .carousel {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+}
+
+.home-slider .carousel-item {
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/*---------------------------------------
+    ## Services
+---------------------------------------*/
+
+
+.service-box {
+  padding: 30px 25px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  margin-top: 70px !important;
+}
+.service-box .services-icon {
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  margin-top: -60px;
+  transition: all 0.5s;
+  background-color: rgba(56, 140, 124, 0.1);
+  color: #388c7c;
+}
+.service-box .services-icon i {
+  line-height: 60px;
+}
+.service-box:hover {
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid transparent;
+}
+.service-box:hover .services-icon {
+  transition: all 0.5s;
+  background-color: #388c7c;
+  color: #ffffff !important;
+}
+
+.service-box.active {
+  background: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+.service-box.active .services-icon {
+  background-color: #388c7c;
+  color: #ffffff !important;
 }
