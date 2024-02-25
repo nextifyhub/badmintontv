@@ -90,6 +90,32 @@ button:focus {
   outline: 0;
 }
 
+.title-border {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.title-border {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background: var(--main-color);
+  position: relative;
+  z-index: 1;
+  right: 10px;
+}
+.title-border:before {
+  position: absolute;
+  right: -15px;
+  top: 0;
+  content: "";
+  height: 2px;
+  width: 10px;
+  background: var(--main-color);
+}
+
+.title-border.two {
+  right: 0px;
+}
 
 
 /*---------------------------------------
@@ -188,7 +214,6 @@ button:focus {
 
 .navbar-custom {
   background-color: transparent;
-  padding: 25px 0px;
   width: 100%;
   border-radius: 0px;
   z-index: 999;
@@ -200,12 +225,12 @@ button:focus {
   color: #ffffff;
   font-size: 25px;
   padding: 0px;
+  border: none;
 }
 
 .navbar-custom.nav-sticky {
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
-  padding: 20px 0px;
 }
 
 .navbar-custom.nav-sticky .custom-menu {
@@ -322,3 +347,187 @@ button:focus {
     ## MATCH SECTION
 ---------------------------------------*/
 
+
+
+
+
+
+
+
+
+
+/*---------------------------------------
+    ## FAVORITE MATCH SECTION
+---------------------------------------*/
+.work-img img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.work-count {
+  opacity: 0.2;
+}
+
+.work-desc {
+  position: relative;
+  margin-top: -60px;
+}
+.work-border{
+  position: relative;
+}
+.work-border:after {
+  background-color: var(--main-color);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  content: "";
+  height: 25px;
+  position: absolute;
+  top: 53px;
+  width: 25px;
+  z-index: 1;
+  right: 0;
+  margin: 0 auto;
+}
+.work-border:before {
+  content: "";
+  border: 1px solid #efefef;
+  position: absolute;
+  width: 46%;
+  left: 75%;
+  top: 65px;
+}
+
+
+/*---------------------------------------
+    ## PRICING SECTION
+---------------------------------------*/
+
+
+.price-box {
+  position: relative;
+  padding: 50px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+.price-box .pricing-badge {
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  right: 0;
+  width: 100%;
+  display: block;
+  font-size: 15px;
+  padding: 0;
+  overflow: hidden;
+  height: 100px;
+}
+.price-box .pricing-badge .badge {
+  float: right;
+  transform: rotate(45deg);
+  right: -67px;
+  top: 17px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  font-size: 13px;
+  margin: 0;
+  padding: 7px 10px;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--main-color);
+}
+.price-features p{
+  font-size: 1.2em;
+}
+.price-features .fa-circle-check{
+  color: var(--main-color);
+  margin-right: 10px;
+}
+.price-features .fa-circle-xmark{
+  color: rgb(199, 4, 4);
+  margin-right: 10px;
+}
+
+.pricing-active-color {
+  border-color: var(--main-color);
+}
+
+.pricing-title {
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+.pricing-name {
+  padding: 30px 10px 60px 10px;
+}
+
+
+.pricing-container {
+	width: 90%;
+	max-width: 1170px;
+	margin: 4em auto;
+}
+
+.pricing-container {
+    margin: 6em auto;
+}
+.pricing-container.full-width {
+    width: 100%;
+    max-width: none;
+}
+
+.pricing-switcher {
+	text-align: center;
+}
+
+.pricing-switcher .fieldset {
+	display: inline-block;
+	position: relative;
+	padding: 2px;
+	border-radius: 50em;
+	border: 2px solid #2d3e50;
+}
+
+.pricing-switcher input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.pricing-switcher label {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	float: left;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	font-size: 1.4rem;
+	color: var(--heading-color);
+}
+
+.pricing-switcher .switch {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 40px;
+	width: 90px;
+	background-color: var(--main-color);
+	border-radius: 50em;
+	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.pricing-switcher input[type="radio"]:checked + label + .switch,
+.pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
+	-webkit-transform: translateX(90px);
+	-moz-transform: translateX(90px);
+	-ms-transform: translateX(90px);
+	-o-transform: translateX(90px);
+	transform: translateX(90px);
+}
+
+.no-js .pricing-switcher {
+	display: none;
+}

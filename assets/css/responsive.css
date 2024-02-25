@@ -3,5 +3,12 @@
     .carousel-caption h1{
         font-size: 2.5rem !important;
       }
+      .work-border:before {
+        display: none;
+      }
+      
+      .work-border:after {
+        display: none;
+      }
   }
 
