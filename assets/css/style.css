@@ -50,7 +50,25 @@ h6 {
   font-weight: 600;
   line-height: 1.4;
 }
-
+.big-title{
+  color: var(--heading-color);
+  font-size: 2.5rem;
+}
+.mid-title{
+  color: var(--heading-color);
+  font-size: 2rem;
+}
+.small-title{
+  color: var(--heading-color);
+  font-size: 1.5rem;
+}
+.section{
+  padding: 80px 0;
+}
+.section-bg{
+  background-color: #eceff4;
+  padding: 80px 0;
+}
 a,
 a:hover,
 a:focus,
@@ -84,7 +102,7 @@ button:focus {
     border-radius: 50px !important;
     overflow: hidden;
     position: relative;
-    border: 3px solid #4D576B;
+    border: 2px solid #4D576B;
     font-size: 18px;
     font-family: var(--heading-font);
     -webkit-transition: all 0.5s ease;
@@ -264,15 +282,16 @@ button:focus {
 }
 .service-box .services-icon {
   font-size: 30px;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   text-align: center;
   position: relative;
-  margin-top: -60px;
+  margin-top: -70px;
   transition: all 0.5s;
   background-color: rgba(56, 140, 124, 0.1);
-  color: #388c7c;
+  color: var(--main-color);
+  padding: 15px;
 }
 .service-box .services-icon i {
   line-height: 60px;
@@ -284,7 +303,7 @@ button:focus {
 }
 .service-box:hover .services-icon {
   transition: all 0.5s;
-  background-color: #388c7c;
+  background-color: var(--main-color);
   color: #ffffff !important;
 }
 
@@ -294,6 +313,12 @@ button:focus {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
 .service-box.active .services-icon {
-  background-color: #388c7c;
+  background-color: var(--main-color);
   color: #ffffff !important;
 }
+
+
+/*---------------------------------------
+    ## MATCH SECTION
+---------------------------------------*/
+
