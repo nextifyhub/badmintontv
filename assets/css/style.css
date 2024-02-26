@@ -379,7 +379,6 @@ button:focus {
 ---------------------------------------*/
 .subscribe{
   padding: 130px 0;
-  height: 100vh;
   background-position: center center;
   background-size: cover;
 }
