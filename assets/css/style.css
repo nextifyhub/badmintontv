@@ -375,9 +375,13 @@ button:focus {
 
 
 /*---------------------------------------
-    ## PRICING SECTION
+    ## SUBSCRIBE SECTION
 ---------------------------------------*/
-
+.subscribe{
+  padding: 130px 0;
+  background-position: center center;
+  background-size: cover;
+}
 
 .price-box {
   position: relative;
@@ -460,8 +464,9 @@ button:focus {
 	display: inline-block;
 	position: relative;
 	padding: 2px;
+  background-color: #fff;
 	border-radius: 50em;
-	border: 2px solid #2d3e50;
+	border: 5px solid #fff;
 }
 
 .pricing-switcher input[type="radio"] {
