@@ -524,3 +524,36 @@ button:focus {
 .footer ul{
   list-style: none;
 }
+
+
+/*---------------------------------------
+    ## SIGN IN SECTION
+---------------------------------------*/
+
+.form-signin {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.bg-home {
+  height: 100vh;
+  background-size: cover !important;
+  align-self: center;
+  position: relative !important;
+  background-position: center center;
+}
+.field-icon {
+  float: right;
+  margin-right: 15px;
+  margin-top: -36px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .bg-home {
+    padding: 150px 0;
+    height: auto;
+  }
+}
