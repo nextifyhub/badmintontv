@@ -9,10 +9,12 @@
     --main-color: #87BFCF;
     --heading-color: #2e3440;
     --paragraph-color: #4c566a;
+    --white: #fff;
     --body-font: "DM Sans", sans-serif;
     --heading-font: "Playfair Display", serif;
     --body-font-size: 16px;
     --line-height30: 1.5;
+    --sub-btn-color: #bf616a;
   }
 
   html {
@@ -122,12 +124,13 @@ button:focus {
     ## Button
 ---------------------------------------*/
 .btn {
-    height: 50px;
-    line-height: 43px !important;
-    padding: 0 30px;
+    height: 42px;
+    line-height: 33px !important;
+    padding: 0 15px;
     overflow: hidden;
     position: relative;
     border: 3px solid var(--main-color);
+    border-radius: 5px !important;
     font-size: 18px;
     font-family: var(--heading-font);
     -webkit-transition: all 0.5s ease;
@@ -135,12 +138,16 @@ button:focus {
     font-weight: 500;
     border-radius: 0px;
     z-index: 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
   .btn:focus, .btn:active {
     outline: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .pre-btn{
+    border: 2px solid #fff !important;
+    color: white !important;
   }
   .btn:hover {
     background: #4285F4;
@@ -169,7 +176,7 @@ button:focus {
   }
   
   .btn-base {
-    color: #000;
+    color: #fff;
     background: var(--main-color);
     line-height: 60px;
   }
@@ -211,7 +218,9 @@ button:focus {
 .navbar{
   border-bottom: 1px solid #9190902f;
 }
-
+.navbar-brand img{
+  height: 45px;
+}
 
 .navbar-custom {
   background-color: transparent;
@@ -388,6 +397,7 @@ button:focus {
   padding: 50px 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
   background-color: #fff;
+  border-radius: 20px;
 }
 .price-box .pricing-badge {
   position: absolute;
@@ -402,19 +412,25 @@ button:focus {
   height: 100px;
 }
 .price-box .pricing-badge .badge {
-  float: right;
-  transform: rotate(45deg);
-  right: -67px;
-  top: 17px;
-  position: relative;
-  text-align: center;
-  width: 200px;
-  font-size: 13px;
-  margin: 0;
-  padding: 7px 10px;
-  font-weight: 500;
-  color: #ffffff;
-  background: var(--main-color);
+	float: right;
+	transform: rotate(45deg);
+	right: -64px;
+	top: 21px;
+	position: relative;
+	text-align: center;
+	width: 200px;
+	font-size: 18px;
+	margin: 0;
+	padding: 7px 10px;
+	font-weight: 500;
+	color: #ffffff;
+	background: var(--sub-btn-color);
+}
+.pre-white{
+  color: white !important;
+}
+.price-dollar{
+  font-size: 52px;
 }
 .price-features p{
   font-size: 1.2em;
@@ -424,12 +440,12 @@ button:focus {
   margin-right: 10px;
 }
 .price-features .fa-circle-xmark{
-  color: rgb(199, 4, 4);
+  color: var(--sub-btn-color);
   margin-right: 10px;
 }
 
 .pricing-active-color {
-  border-color: var(--main-color);
+  border-color: white;
 }
 
 .pricing-title {
@@ -437,82 +453,246 @@ button:focus {
   color: var(--main-color);
 }
 
-.pricing-name {
-  padding: 30px 10px 60px 10px;
-}
+/* NEW SUBSCRIPTION CODE  */
 
 
-.pricing-container {
-	width: 90%;
-	max-width: 1170px;
-	margin: 4em auto;
+.switch-wrapper {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border: 1px solid lightgrey;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  background: var(--white);
 }
 
-.pricing-container {
-    margin: 6em auto;
-}
-.pricing-container.full-width {
-    width: 100%;
-    max-width: none;
+.switch-wrapper [type="radio"] {
+  position: absolute;
+  left: -9999px;
 }
 
-.pricing-switcher {
-	text-align: center;
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"],
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"] {
+  color: var(--white);
 }
 
-.pricing-switcher .fieldset {
-	display: inline-block;
-	position: relative;
-	padding: 2px;
-  background-color: #fff;
-	border-radius: 50em;
-	border: 5px solid #fff;
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"]:hover,
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"]:hover {
+  background: transparent;
 }
 
-.pricing-switcher input[type="radio"] {
-	position: absolute;
-	opacity: 0;
+.switch-wrapper
+  [type="radio"]:checked#monthly
+  + label[for="yearly"]
+  ~ .highlighter {
+  transform: none;
 }
 
-.pricing-switcher label {
-	position: relative;
-	z-index: 1;
-	display: inline-block;
-	float: left;
-	width: 90px;
-	height: 40px;
-	line-height: 40px;
-	cursor: pointer;
-	font-size: 1.4rem;
-	color: var(--heading-color);
+.switch-wrapper
+  [type="radio"]:checked#yearly
+  + label[for="monthly"]
+  ~ .highlighter {
+  transform: translateX(100%);
 }
 
-.pricing-switcher .switch {
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 40px;
-	width: 90px;
-	background-color: var(--main-color);
-	border-radius: 50em;
-	-webkit-transition: -webkit-transform 0.5s;
-	-moz-transition: -moz-transform 0.5s;
-	transition: transform 0.5s;
+.switch-wrapper label {
+  font-size: 16px;
+  z-index: 1;
+  min-width: 100px;
+  line-height: 32px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: color 0.25s ease-in-out;
 }
 
-.pricing-switcher input[type="radio"]:checked + label + .switch,
-.pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
-	-webkit-transform: translateX(90px);
-	-moz-transform: translateX(90px);
-	-ms-transform: translateX(90px);
-	-o-transform: translateX(90px);
-	transform: translateX(90px);
+.switch-wrapper label:hover {
+  background: var(--lightgray);
 }
 
-.no-js .pricing-switcher {
-	display: none;
+.switch-wrapper .highlighter {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 5px;
+  background: var(--main-color);
+  transition: transform 0.25s ease-in-out;
 }
 
+/* subscription-box STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.subscription-box-wrapper {
+  background: var(--white);
+  overflow-x: auto;
+}
+
+.subscription-box {
+  width: 100%;
+}
+
+.subscription-box tr {
+  display: flex;
+}
+
+.subscription-box th,
+.subscription-box td {
+  width: 25%;
+  min-width: 150px;
+}
+
+.subscription-box th:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  padding: 1rem 10px;
+}
+
+.subscription-box th:nth-child(1) .svg-wrapper {
+  margin-top: 10px;
+}
+
+.subscription-box th:nth-child(1) svg {
+  width: 22px;
+  height: 22px;
+}
+
+.subscription-box th .heading {
+  padding: 1rem;
+  color: var(--white);
+}
+
+.subscription-box th:nth-child(2) .heading {
+  background: var(--starter);
+}
+
+.subscription-box th:nth-child(3) .heading {
+  background: var(--essential);
+}
+
+.subscription-box th:nth-child(4) .heading {
+  background: var(--professional);
+}
+
+.subscription-box th .info {
+  position: relative;
+  padding: 1.5rem 0;
+  border-left: 1px solid var(--lightgray);
+}
+
+.subscription-box th .popular {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 11px;
+  background: var(--popular);
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.subscription-box th .amount {
+  font-size: 2rem;
+}
+
+.subscription-box th .amount span {
+  display: block;
+  transform: translateY(-8px);
+}
+
+.subscription-box th:nth-child(2) .amount {
+  color: var(--starter);
+}
+
+.subscription-box th:nth-child(3) .amount {
+  color: var(--essential);
+}
+
+.subscription-box th:nth-child(4) .amount {
+  color: var(--professional);
+}
+
+.subscription-box th .billing-msg,
+.subscription-box th .amount span {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.subscription-box th button {
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.subscription-box th:nth-child(2) button {
+  color: var(--starter);
+  border: 1px solid var(--starter);
+}
+
+.subscription-box th:nth-child(2) button:hover {
+  background: var(--starter);
+}
+
+.subscription-box th:nth-child(3) button {
+  color: var(--essential);
+  border: 1px solid var(--essential);
+}
+
+.subscription-box th:nth-child(3) button:hover {
+  background: var(--essential);
+}
+
+.subscription-box th:nth-child(4) button {
+  color: var(--professional);
+  border: 1px solid var(--professional);
+}
+
+.subscription-box th:nth-child(4) button:hover {
+  background: var(--professional);
+}
+
+.subscription-box th button:hover {
+  color: var(--white);
+}
+
+.subscription-box td {
+  padding: 10px;
+}
+
+.subscription-box td:not(:first-child) {
+  border-left: 1px solid var(--lightgray);
+}
+
+.subscription-box td:first-child {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.subscription-box svg {
+  width: 18px;
+  height: 18px;
+}
+
+.subscription-box svg.not-included {
+  fill: var(--gray);
+}
+
+.subscription-box svg.starter {
+  fill: var(--starter);
+}
+
+.subscription-box svg.essential {
+  fill: var(--essential);
+}
+
+.subscription-box svg.professional {
+  fill: var(--professional);
+}
+
+.subscription-box .hide {
+  display: none;
+}
 
 /*---------------------------------------
     ## FOOTER SECTION
@@ -534,6 +714,7 @@ button:focus {
   width: 100%;
   max-width: 400px;
   margin: auto;
+  border-radius: 20px;
 }
 
 .bg-home {
@@ -557,3 +738,7 @@ button:focus {
     height: auto;
   }
 }
+
+/*---------------------------------------
+    ## FILTER PAGE SECTION
+---------------------------------------*/

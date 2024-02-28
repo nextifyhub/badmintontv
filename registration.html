@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BadmintonTV</title>
+    <title>Registration - Badminton TV</title>
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light" id="navbar">
         <div class="container">
             <a class="navbar-brand logo text-uppercase" href="index.html">
-                <img src="assets/img/Logo.png" alt="" height="60" />
+                <img src="assets/img/Logo.png" alt=""/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
                     <div class="card form-signin border-0 p-4 shadow">
                         <form>
                             <div class="text-center mb-4">
-                                <h5 class="mid-title text-uppercase">Registration</h5>
+                                <h5 class="mid-title">Register</h5>
                             </div>
                         
                             <div class="form-floating mb-2">
@@ -62,6 +62,16 @@
                             </div>
 
                             <div class="form-floating mb-2">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Country</option>
+                                    <option value="1">USA</option>
+                                    <option value="2">Canada</option>
+                                    <option value="3">China</option>
+                                    <option value="3">Japan</option>
+                                  </select>
+                            </div>
+
+                            <div class="form-floating mb-2">
                                 <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
                                 <label for="floatingEmail">Email Address</label>
                             </div>
@@ -71,10 +81,11 @@
                                 <label for="floatingPassword">Password</label>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
-                        
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">I Accept <a href="#" style="color: var(--main-color);">Terms And Condition</a></label>
+                            
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="confirm-password-field" name="confirmPassword" placeholder="Confirm Password">
+                                <label for="confirmFloatingPassword">Confirm Password</label>
+                                <span toggle="#confirm-password-field" class="fa fa-fw fa-eye field-icon toggle-confirm-password"></span>
                             </div>
             
                             <button class="btn btn-base w-100" type="submit">Register</button>
@@ -113,15 +124,25 @@
     <script src="assets/js/bootstrap.js"></script>
     <script>
         $(".toggle-password").click(function() {
-
-        $(this).toggleClass("fa-eye fa-eye-slash");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-        input.attr("type", "text");
-        } else {
-        input.attr("type", "password");
-        }
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
         });
+
+        $(".toggle-confirm-password").click(function() {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
     </script>
 
 </body>
