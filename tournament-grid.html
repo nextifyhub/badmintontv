@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament - Badminton TV</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- START  NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light" id="navbar">
+        <div class="container">
+            <a class="navbar-brand logo text-uppercase" href="index.html">
+                <img src="assets/img/Logo.png" alt=""  />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="assets/img/hamburger.png" alt="" height="50">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-center" id="navbar-navlist">
+                    <li class="nav-item">
+                        <img src="assets/img/USA-Flag.png" alt="USA Flag" height="20">
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="btn btn-base b-animate-4" href="login.html"><i class="fa-solid fa-user mr-2"></i> User Name</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- TOURNAMENT SECTION START -->
+    <section class="tournament" style="background: url('assets/img/subscribe-bg.jpg')">
+        <div class="container rounded-3 p-5" style="background-color: var(--bg-color)">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h3 class="text-white">Tournament</h3>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="tournament-grid.html"><i class="fa-solid fa-border-all text-white fs-4"></i></a>
+                    <a href="tournament.html"><i class="fa-solid fa-list text-white fs-4"></i></a>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-base" onclick="openRightModal()"><i class="fa-solid fa-filter mr-2"></i> Filter
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div id="exampleModal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title pb-2">Modal title</h5>
+                                    <span class="close" onclick="closeRightModal()"><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Content goes here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="color: #ffffff8e;">
+
+            
+
+
+            
+        </div>
+    </section>
+
+
+    <!-- TOURNAMENT SECTION END -->
+    
+
+     <!-- FOOTER START  -->
+     <section class="footer pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <ul class="d-flex justify-content-center gap-4 text-white">
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- END FOOTER  -->
+
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script>
+        function openRightModal() {
+          var modal = document.getElementById('exampleModal');
+          modal.style.width = '350px';
+          modal.style.height = '100%';
+          modal.style.right = '0';
+          modal.style.left = 'auto';
+          modal.style.transition = 'right 0.3s ease';
+          modal.style.display = 'block';
+        }
+      
+        function closeRightModal() {
+          var modal = document.getElementById('exampleModal');
+          modal.style.right = '-100%';
+          modal.style.left = 'auto';
+          modal.style.transition = 'right 0.3s ease';
+        }
+      </script>
+</body>
+</html>

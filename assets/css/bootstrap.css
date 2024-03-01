@@ -1876,7 +1876,7 @@ progress {
   border-color: var(--bs-table-border-color);
 }
 .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
+  padding: 1.5rem;
   color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
@@ -2001,6 +2001,19 @@ progress {
   --bs-table-active-color: #000;
   --bs-table-hover-bg: #ece1be;
   --bs-table-hover-color: #000;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
+.table-theme {
+  --bs-table-color: #fff;
+  --bs-table-bg: transparent;
+  --bs-table-border-color: #cccccc4f;
+  --bs-table-striped-bg: transparent;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #e6dbb9;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #b0b0b06b;
+  --bs-table-hover-color: #fff;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
 }
@@ -5549,8 +5562,6 @@ textarea.form-control-lg {
   pointer-events: auto;
   background-color: var(--bs-modal-bg);
   background-clip: padding-box;
-  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-  border-radius: var(--bs-modal-border-radius);
   outline: 0;
 }
 
@@ -5577,7 +5588,6 @@ textarea.form-control-lg {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  padding: var(--bs-modal-header-padding);
   border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
