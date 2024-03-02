@@ -696,7 +696,7 @@ button:focus {
 ---------------------------------------*/
 
 .footer{
-  background-color: #3b4252;
+  background-color: var(--bg-color);
 }
 .footer ul{
   list-style: none;
