@@ -744,7 +744,7 @@ button:focus {
   width: 300px;
   position: relative;
 }
-.multiSelect, .multiSelectTournaments, .multiSelectCountry{
+.multiSelect{
   width: 300px;
   position: relative;
 }
