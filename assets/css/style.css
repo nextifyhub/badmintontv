@@ -71,7 +71,7 @@ h6 {
   padding: 100px 0;
 }
 .section-bg{
-  background-color: #3b4252;
+  background-color: var(--bg-color);
   padding: 100px 0;
 }
 a,
