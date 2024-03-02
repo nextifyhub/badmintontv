@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
 
@@ -55,11 +56,124 @@
                         <div id="exampleModal" class="modal">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title pb-2">Modal title</h5>
+                                    <h5 class="modal-title pb-2">Filter</h5>
                                     <span class="close" onclick="closeRightModal()"><i class="fa-solid fa-xmark"></i></span>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- Content goes here -->
+                                    <form >
+
+                                        <p>General</p>
+                                          <hr>
+                                        <!-- Year  -->
+                                        <div class="multiSelect">
+                                            <select multiple class="multiSelect_field" data-placeholder="Year">
+                                              <option value="2024">2024</option>
+                                              <option value="2023">2023</option>
+                                              <option value="2022">2022</option>
+                                              <option value="2021">2021</option>
+                                              <option value="2020">2020</option>
+                                            </select>
+                                          </div>
+
+                                          <!-- Tournaments  -->
+                                          <div class="multiSelectTournaments mt-3">
+                                            <select multiple class="multiSelect_field_tournaments" data-placeholder="Tournaments">
+                                              <option value="2023 China Masters">2023 China Masters</option>
+                                              <option value="2023 Korea Open">2023 Korea Open</option>
+                                              <option value="2023 Taipei Open 2">2023 Taipei Open 2</option>
+                                              <option value="2023 Singapore Open">2023 Singapore Open</option>
+                                              <option value="2019 Sudirman Cup">2019 Sudirman Cup</option>
+                                            </select>
+                                          </div>
+
+                                          <!-- Country  -->
+                                          <div class="multiSelectCountry mt-3">
+                                            <select multiple class="multiSelect_field_Country" data-placeholder="Country">
+                                              <option value="China">China</option>
+                                              <option value="Korea">Korea</option>
+                                              <option value="Taipei">Taipei</option>
+                                              <option value="Singapore">Singapore</option>
+                                              <option value="Sudirman">Sudirman</option>
+                                            </select>
+                                          </div>
+
+
+                                          <!-- Discipline  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Discipline">
+                                              <option value="Men's Singles">Men's Singles</option>
+                                              <option value="Women's Singles">Women's Singles</option>
+                                              <option value="Men's Doubles">Men's Doubles</option>
+                                              <option value="Women's Doubles">Women's Doubles</option>
+                                              <option value="Mixed doubles">Mixed doubles</option>
+                                            </select>
+                                          </div>
+
+
+                                          <!-- Round  -->
+                                          <div class="multiSelect my-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Rounds">
+                                              <option value="Finals">Finals</option>
+                                              <option value="Semi-Finals">Semi-Finals</option>
+                                              <option value="Quarter-Finals">Quarter-Finals</option>
+                                              <option value="Round of 16">Round of 16</option>
+                                              <option value="Round of 32">Round of 32</option>
+                                              <option value="Round of 64">Round of 64</option>
+                                              <option value="Round 3">Round 3</option>
+                                              <option value="Round 2">Round 2</option>
+                                              <option value="Round 1">Round 1</option>
+                                              <option value="Day 6">Day 6</option>
+                                              <option value="Day 5">Day 5</option>
+                                              <option value="Day 4">Day 4</option>
+                                              <option value="Day 3">Day 3</option>
+                                              <option value="Day 2">Day 2</option>
+                                              <option value="Day 1">Day 1</option>
+                                              <option value="Group Stage">Group Stage</option>
+                                            </select>
+                                          </div>
+
+
+                                          <p>Athletes</p>
+                                          <hr>
+
+                                          <!-- Single Players  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Single Players">
+                                              <option value="Beiwen ZHANG">Beiwen ZHANG</option>
+                                              <option value="Pitchamon OPATNIPUTH">Pitchamon OPATNIPUTH</option>
+                                              <option value="CHEN Tang Jie">CHEN Tang Jie</option>
+                                              <option value="TOH Ee Wei">TOH Ee Wei</option>
+                                              <option value="CHIU Hsiang Chieh">CHIU Hsiang Chieh</option>
+                                              <option value="LIN Xiao Min">LIN Xiao Min</option>
+                                            </select>
+                                          </div>
+
+                                          <!-- Double Teams  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Double Teams">
+                                              <option value="CHEN Tang Jie / TOH Ee Wei">CHEN Tang Jie / TOH Ee Wei</option>
+                                              <option value="CHIU Hsiang Chieh / LIN Xiao Min">CHIU Hsiang Chieh / LIN Xiao Min</option>
+                                              <option value="Benyapa AIMSAARD / Nuntakarn AIMSAARD">Benyapa AIMSAARD / Nuntakarn AIMSAARD</option>
+                                              <option value="Mayu MATSUMOTO / Wakana NAGAHARA">Mayu MATSUMOTO / Wakana NAGAHARA</option>
+                                              <option value="TANG Chun Man / TSE Ying Suet">TANG Chun Man / TSE Ying Suet</option>
+                                              <option value="YE Hong Wei / LEE Chia Hsin">YE Hong Wei / LEE Chia Hsin</option>
+                                            </select>
+                                          </div>
+
+                                          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
+                                              <g stroke-linecap="round" stroke-linejoin="round">
+                                                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                                              </g>
+                                            </symbol>
+                                          </svg>
+
+                                          <button value="Submit" type="Submit" class="btn btn-base mt-3">Filter</button>
+                                    </form>
+
+
+                                    
                                 </div>
                             </div>
                         </div>
@@ -69,7 +183,103 @@
 
             <hr style="color: #ffffff8e;">
 
-            
+            <div class="video-section">
+                <table class="table table-theme table-striped table-hover align-items-center">
+                    <thead>
+                      <tr>
+                        <th scope="col"><p>2023 China Masters <span class="p-1 theme-bg rounded-3 text-white">Close</span></p></th>
+                        <th scope="col">
+                            <div class="d-flex justify-content-end">
+                                <a href="#" class="btn btn-base">More +</a>
+                            </div>
+                        </th>
+                      </tr>
+                    </thead>
+                </table>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="video-box bg-white">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box p-3">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#" style="color: var(--main-color);">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="video-box bg-white">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box p-3">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#" style="color: var(--main-color);">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="video-box bg-white">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box p-3">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#" style="color: var(--main-color);">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="video-box bg-white">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box p-3">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#" style="color: var(--main-color);">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="video-box bg-white">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box p-3">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#" style="color: var(--main-color);">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 
             
@@ -117,6 +327,218 @@
           modal.style.left = 'auto';
           modal.style.transition = 'right 0.3s ease';
         }
+
+
+
+
+        // Year jQuery  CODE 
+
+        jQuery(function() {
+        jQuery('.multiSelect').each(function(e) {
+            var self = jQuery(this);
+            var field = self.find('.multiSelect_field');
+            var fieldOption = field.find('option');
+            var placeholder = field.attr('data-placeholder');
+
+            field.hide().after(`<div class="multiSelect_dropdown"></div>
+                                <span class="multiSelect_placeholder">` + placeholder + `</span>
+                                <ul class="multiSelect_list"></ul>
+                                <span class="multiSelect_arrow"></span>`);
+            
+            fieldOption.each(function(e) {
+            jQuery('.multiSelect_list').append(`<li class="multiSelect_option" data-value="`+jQuery(this).val()+`">
+                                                    <a class="multiSelect_text">`+jQuery(this).text()+`</a>
+                                                </li>`);
+            });
+            
+            var dropdown = self.find('.multiSelect_dropdown');
+            var list = self.find('.multiSelect_list');
+            var option = self.find('.multiSelect_option');
+            var optionText = self.find('.multiSelect_text');
+            
+            dropdown.attr('data-multiple', 'true');
+            list.css('top', dropdown.height() + 5);
+            
+            option.click(function(e) {
+            var self = jQuery(this);
+                    e.stopPropagation();
+                self.addClass('-selected');
+                field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
+            dropdown.append(function(e) {
+                return jQuery('<span class="multiSelect_choice">'+ self.children().text() +'<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function(e) {
+                var self = jQuery(this);
+                e.stopPropagation();
+                self.remove();
+                list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
+                list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                field.find('option:contains(' + self.text() + ')').prop('selected', false);
+                if (dropdown.children(':visible').length === 0) {
+                    dropdown.removeClass('-hasValue');
+                }
+                });
+            }).addClass('-hasValue');
+                list.css('top', dropdown.height() + 5);
+                if (!option.not('.-selected').length) {
+                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                }
+            });
+            
+            dropdown.click(function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            dropdown.toggleClass('-open');
+            list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
+            });
+            
+            jQuery(document).on('click touch', function(e) {
+                if (dropdown.hasClass('-open')) {
+                    dropdown.toggleClass('-open');
+                    list.removeClass('-open');
+                }
+            });
+        });
+        });
+
+          // Tournaments jQuery CODE 
+
+          jQuery(function() {
+        jQuery('.multiSelectTournaments').each(function(e) {
+            var self = jQuery(this);
+            var field = self.find('.multiSelect_field_tournaments');
+            var fieldOption = field.find('option');
+            var placeholder = field.attr('data-placeholder');
+
+            field.hide().after(`<div class="multiSelect_dropdown"></div>
+                                <span class="multiSelect_placeholder">` + placeholder + `</span>
+                                <ul class="multiSelect_list"></ul>
+                                <span class="multiSelect_arrow"></span>`);
+            
+            fieldOption.each(function(e) {
+            jQuery('.multiSelect_list').append(`<li class="multiSelect_option" data-value="`+jQuery(this).val()+`">
+                                                    <a class="multiSelect_text">`+jQuery(this).text()+`</a>
+                                                </li>`);
+            });
+            
+            var dropdown = self.find('.multiSelect_dropdown');
+            var list = self.find('.multiSelect_list');
+            var option = self.find('.multiSelect_option');
+            var optionText = self.find('.multiSelect_text');
+            
+            dropdown.attr('data-multiple', 'true');
+            list.css('top', dropdown.height() + 5);
+            
+            option.click(function(e) {
+            var self = jQuery(this);
+                    e.stopPropagation();
+                self.addClass('-selected');
+                field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
+            dropdown.append(function(e) {
+                return jQuery('<span class="multiSelect_choice">'+ self.children().text() +'<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function(e) {
+                var self = jQuery(this);
+                e.stopPropagation();
+                self.remove();
+                list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
+                list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                field.find('option:contains(' + self.text() + ')').prop('selected', false);
+                if (dropdown.children(':visible').length === 0) {
+                    dropdown.removeClass('-hasValue');
+                }
+                });
+            }).addClass('-hasValue');
+                list.css('top', dropdown.height() + 5);
+                if (!option.not('.-selected').length) {
+                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                }
+            });
+            
+            dropdown.click(function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            dropdown.toggleClass('-open');
+            list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
+            });
+            
+            jQuery(document).on('click touch', function(e) {
+                if (dropdown.hasClass('-open')) {
+                    dropdown.toggleClass('-open');
+                    list.removeClass('-open');
+                }
+            });
+        });
+        });
+
+
+
+          // Country jQuery CODE 
+
+          jQuery(function() {
+        jQuery('.multiSelectCountry').each(function(e) {
+            var self = jQuery(this);
+            var field = self.find('.multiSelect_field_Country');
+            var fieldOption = field.find('option');
+            var placeholder = field.attr('data-placeholder');
+
+            field.hide().after(`<div class="multiSelect_dropdown"></div>
+                                <span class="multiSelect_placeholder">` + placeholder + `</span>
+                                <ul class="multiSelect_list"></ul>
+                                <span class="multiSelect_arrow"></span>`);
+            
+            fieldOption.each(function(e) {
+            jQuery('.multiSelect_list').append(`<li class="multiSelect_option" data-value="`+jQuery(this).val()+`">
+                                                    <a class="multiSelect_text">`+jQuery(this).text()+`</a>
+                                                </li>`);
+            });
+            
+            var dropdown = self.find('.multiSelect_dropdown');
+            var list = self.find('.multiSelect_list');
+            var option = self.find('.multiSelect_option');
+            var optionText = self.find('.multiSelect_text');
+            
+            dropdown.attr('data-multiple', 'true');
+            list.css('top', dropdown.height() + 5);
+            
+            option.click(function(e) {
+            var self = jQuery(this);
+                    e.stopPropagation();
+                self.addClass('-selected');
+                field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
+            dropdown.append(function(e) {
+                return jQuery('<span class="multiSelect_choice">'+ self.children().text() +'<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function(e) {
+                var self = jQuery(this);
+                e.stopPropagation();
+                self.remove();
+                list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
+                list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                field.find('option:contains(' + self.text() + ')').prop('selected', false);
+                if (dropdown.children(':visible').length === 0) {
+                    dropdown.removeClass('-hasValue');
+                }
+                });
+            }).addClass('-hasValue');
+                list.css('top', dropdown.height() + 5);
+                if (!option.not('.-selected').length) {
+                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                }
+            });
+            
+            dropdown.click(function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            dropdown.toggleClass('-open');
+            list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
+            });
+            
+            jQuery(document).on('click touch', function(e) {
+                if (dropdown.hasClass('-open')) {
+                    dropdown.toggleClass('-open');
+                    list.removeClass('-open');
+                }
+            });
+        });
+        });
+
+
+
       </script>
 </body>
 </html>
