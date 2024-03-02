@@ -15,7 +15,7 @@
     --body-font-size: 16px;
     --line-height30: 1.5;
     --sub-btn-color: #bf616a;
-    --bg-color: #3b4252;
+    --bg-color: #4c566a;
   }
 
   html {
@@ -1045,7 +1045,7 @@ transition-delay: 100ms;
 
 .close:hover,
 .close:focus {
-  color: red;
+  color: var(--main-color);
 }
 
 
