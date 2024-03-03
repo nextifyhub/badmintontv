@@ -95,32 +95,6 @@ button:focus {
   outline: 0;
 }
 
-.title-border {
-  border-bottom: 1px solid var(--main-color);
-}
-
-.title-border {
-  display: inline-block;
-  width: 150px;
-  height: 2px;
-  background: var(--main-color);
-  position: relative;
-  z-index: 1;
-  right: 10px;
-}
-.title-border:before {
-  position: absolute;
-  right: -35px;
-  top: 0;
-  content: "";
-  height: 2px;
-  width: 30px;
-  background: var(--main-color);
-}
-
-.title-border.two {
-  right: 0px;
-}
 
 
 /*---------------------------------------
