@@ -32,3 +32,4 @@ var spy = new Gumshoe('#navbar-navlist a', {
     contentClass: 'active', // applied to the content
     offset: 70
 });
+

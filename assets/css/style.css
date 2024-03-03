@@ -214,6 +214,7 @@ button:focus {
     background: var(--main-color);
     border: 2px solid var(--main-color);
   }
+
   
 /*---------------------------------------
     ## Header
@@ -994,6 +995,60 @@ transition-delay: 100ms;
   font-size: 13px;
 }
 
+
+/*---------------------------------------
+    ## TOOLTIPS 
+---------------------------------------*/
+
+.tooltips {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltips .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltips i{
+  font-size: 12px;
+}
+.tooltips i{
+  width: 20px;
+  height: 20px;
+  background: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+}
+.tooltips .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltips:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 
 /*---------------------------------------
     ## TOURNAMENTS PAGE 
