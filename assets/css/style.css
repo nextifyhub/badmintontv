@@ -164,30 +164,6 @@ button:focus {
   .btn-base:active:after, .btn-base:focus:after, .btn-base:hover:after {
     background: var(--main-color);
   }
-  
-  .btn-white {
-    color: var(--heading-color);
-    background: #fff;
-    line-height: 60px;
-  }
-  .btn-white:active, .btn-white:focus, .btn-white:hover {
-    color: #fff;
-    background: var(--main-color);
-  }
-  .btn-white:active:after, .btn-white:focus:after, .btn-white:hover:after {
-    background: var(--main-color);
-  }
-  
-  .btn-border-white {
-    color: #fff;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    line-height: 48px;
-  }
-  .btn-border-white:hover, .btn-border-white:focus {
-    color: #fff;
-    background: var(--main-color);
-    border: 2px solid var(--main-color);
-  }
 
   
 /*---------------------------------------
@@ -716,7 +692,7 @@ button:focus {
 ---------------------------------------*/
 
 .multiSelect {
-  width: 300px;
+  width: 400px !important;
   position: relative;
 }
 .multiSelect{
@@ -735,7 +711,7 @@ button:focus {
   border-radius: 4px;
   box-shadow: none;
   outline: none;
-  background-color: #fff;
+  background-color: var(--bg-color);
   color: #444f5b;
   border: 1px solid #d9dbde;
   font-weight: 400;
@@ -948,7 +924,7 @@ transition-delay: 100ms;
   font-size: 14px;
   top: 8px;
   padding: 0 4px;
-  background-color: #fff;
+  background-color: var(--bg-color);
   color: #b8bcbf;
   pointer-events: none;
   transition: all .1s ease;
@@ -1033,7 +1009,7 @@ transition-delay: 100ms;
   align-self: center;
   position: relative !important;
   background-position: center center;
-  padding: 150px 0;
+  padding: 81px 0;
 }
 
 
@@ -1081,6 +1057,9 @@ transition-delay: 100ms;
 /*---------------------------------------
     ## TOURNAMENTS GRID PAGE 
 ---------------------------------------*/
+.video-section{
+  padding: 50px 0;
+}
 .video-box{
   border-radius: 5px;
 }
@@ -1096,7 +1075,6 @@ transition-delay: 100ms;
   bottom: 8%;
   right: 3%;
   color: #fff;
-  font-weight: 600;
   background-color: var(--main-color);
   padding: 5px;
   border-radius: 3px;
@@ -1107,7 +1085,6 @@ transition-delay: 100ms;
   bottom: 8%;
   left: 3%;
   color: #fff;
-  font-weight: 600;
   background-color: var(--main-color);
   padding: 5px;
   border-radius: 3px;
@@ -1118,14 +1095,17 @@ transition-delay: 100ms;
   top: 3%;
   left: 3%;
   color: #fff;
-  font-weight: 600;
   background-color: var(--main-color);
   padding: 5px;
   border-radius: 3px;
   font-size: 14px;
 }
-
-
+.video-title{
+  color: #fff;
+}
+.video-country-tag{
+  color: var(--main-color)
+}
 
 
 
