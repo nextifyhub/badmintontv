@@ -100,7 +100,20 @@ button:focus {
 /*---------------------------------------
     ## Button
 ---------------------------------------*/
-
+.top-btn{
+  border: 1px solid #000;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: inline-flex;
+}
+.mid-btn{
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.main-btn{
+  display: inline-block;
+}
 .btns {
   background: linear-gradient(#bf616a, #bf616a) padding-box,
   radial-gradient(circle, rgba(191,97,106,1) 0%, rgba(226,182,135,1) 0%, rgba(191,97,106,1) 100%) border-box;
@@ -109,6 +122,7 @@ button:focus {
   padding: 7px 20px;
   color: #fff;
   font-size: 17px;
+  display: inline-block;
 }
 .btns:hover{
   color: #fff;
