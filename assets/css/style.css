@@ -100,71 +100,35 @@ button:focus {
 /*---------------------------------------
     ## Button
 ---------------------------------------*/
-.btn {
-    height: 42px;
-    line-height: 33px !important;
-    padding: 0 15px;
-    overflow: hidden;
-    position: relative;
-    border: 3px solid var(--main-color);
-    border-radius: 5px !important;
-    font-size: 18px;
-    font-family: var(--heading-font);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    font-weight: 500;
-    border-radius: 0px;
-    z-index: 0;
-    text-transform: capitalize;
-  }
-  .btn:focus, .btn:active {
-    outline: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .pre-btn{
-    border: 2px solid #fff !important;
-    color: white !important;
-  }
-  .btn:hover {
-    background: #4285F4;
-  }
-  .btn:hover:after {
-    height: 100%;
-    width: 135%;
-  }
-  .btn:after {
-    content: "";
-    background: #fff;
-    position: absolute;
-    -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-    z-index: -1;
-    height: 100%;
-    left: -35%;
-    top: 0;
-    -webkit-transform: skew(30deg);
-    transform: skew(30deg);
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
-    width: 0;
-  }
-  
-  .btn-base {
-    color: #fff;
-    background: var(--main-color);
-    line-height: 60px;
-  }
-  .btn-base:active, .btn-base:focus, .btn-base:hover {
-    color: #fff;
-    background: var(--main-color);
-  }
-  .btn-base:active:after, .btn-base:focus:after, .btn-base:hover:after {
-    background: var(--main-color);
-  }
 
+.btns {
+  background: linear-gradient(#bf616a, #bf616a) padding-box,
+  radial-gradient(circle, rgba(191,97,106,1) 0%, rgba(226,182,135,1) 0%, rgba(191,97,106,1) 100%) border-box;
+  border: 5px solid transparent;
+  border-radius: 10px;
+  padding: 7px 20px;
+  color: #fff;
+  font-size: 17px;
+}
+.btns:hover{
+  color: #fff;
+}
+.btn-border{
+  padding: 4px;
+  border: 2px solid #000;
+}
+.btn {
+  background: linear-gradient(#87BFCF, #87BFCF) padding-box,
+  radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(135,191,207,1) 100%, rgba(135,191,207,1) 100%) border-box;
+  border: 5px solid transparent;
+  border-radius: 10px;
+  padding: 7px 20px;
+  color: #fff;
+  font-size: 16px;
+}
+.btn:hover{
+  color: #fff;
+}
   
 /*---------------------------------------
     ## Header
