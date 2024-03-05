@@ -5495,7 +5495,7 @@ textarea.form-control-lg {
   --bs-modal-header-padding-x: 1rem;
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
-  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-color: rgba(205, 205, 205, 0.242);
   --bs-modal-header-border-width: var(--bs-border-width);
   --bs-modal-title-line-height: 1.5;
   --bs-modal-footer-gap: 0.5rem;
