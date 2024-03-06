@@ -20,5 +20,17 @@
         text-align: center;
         margin-bottom: 20px;
       }
+      .videos-contain-padding{
+        padding-top: 12% !important;
+      }
+      .videos-contain-padding .btn{
+        font-size: 12px;
+      }
+      .videos-select-item .form-select{
+        font-size: 12px;
+      }
+      .videos_page{
+        padding: 100px 20px 20px 20px !important;
+      }
   }
 

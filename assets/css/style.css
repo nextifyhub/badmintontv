@@ -65,7 +65,7 @@ h6 {
 }
 .small-title{
   color: var(--heading-color);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .section{
   padding: 100px 0;
@@ -117,9 +117,9 @@ button:focus {
 .btns {
   background: linear-gradient(#bf616a, #bf616a) padding-box,
   radial-gradient(circle, rgba(191,97,106,1) 0%, rgba(226,182,135,1) 0%, rgba(191,97,106,1) 100%) border-box;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   border-radius: 10px;
-  padding: 7px 20px;
+  padding: 5px 20px;
   color: #fff;
   font-size: 17px;
   display: inline-block;
@@ -134,9 +134,9 @@ button:focus {
 .btn {
   background: linear-gradient(#87BFCF, #87BFCF) padding-box,
   radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(135,191,207,1) 100%, rgba(135,191,207,1) 100%) border-box;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   border-radius: 10px;
-  padding: 7px 20px;
+  padding: 5px 20px;
   color: #fff;
   font-size: 16px;
 }
@@ -192,39 +192,12 @@ button:focus {
   font-size: 30px;
   color: #fff;
 }
-.notification_icon{
-  position: relative;
-}
-.notify_alert {
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background-color: red;
-	border-radius: 50%;
-	top: 0px;
-	right: -4px;
-	border: 3px solid var(--bg-color);
-}
 .navbar-custom.nav-sticky .notify_alert{
   border: 3px solid #e5e9f0e7
 }
 .navbar-custom.nav-sticky .user_alert{
   border: 3px solid #e5e9f0e7
 }
-.user_icon{
-  position: relative;
-}
-.user_alert{
-  position: absolute;
-	width: 15px;
-	height: 15px;
-	background-color: red;
-	border-radius: 50%;
-	top: -04px;
-	right: -4px;
-	border: 3px solid var(--bg-color);
-}
-
   
 /*---------------------------------------
     ## Slider
@@ -1092,30 +1065,30 @@ transition-delay: 100ms;
   bottom: 8%;
   right: 3%;
   color: #fff;
-  background-color: var(--bg-color);
+  background-color: #000;
   padding: 5px;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .video-matches-tag{
   position: absolute;
   bottom: 8%;
   left: 3%;
   color: #fff;
-  background-color: var(--bg-color);
+  background-color: #000;
   padding: 5px;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .players-tag{
   position: absolute;
   top: 3%;
   left: 3%;
   color: #fff;
-  background-color: var(--bg-color);
+  background-color: #000;
   padding: 5px;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .video-title{
   color: #fff;
@@ -1126,5 +1099,49 @@ transition-delay: 100ms;
 }
 
 
+/*---------------------------------------
+    ## VIDEOS PAGE 
+---------------------------------------*/
 
+
+.videos_page{
+  padding: 100px 40px 20px 40px;
+  box-shadow: 5 5 5 0.3;
+  background-color: var(--bg-color);
+}
+.bg-container{
+  box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+}
+.big-videos{
+  position: relative;
+}
+
+.videos-select-item{
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+.video-container{
+  position: relative;
+}
+.videos-overlay-contain{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 99%;
+  border-radius: 10px;
+  padding: 5%;
+}
+.videos-select-item .form-select{
+  background-color: var(--bg-color);
+  color: #fff;
+  border: none;
+}
+.videos-contain-padding{
+  padding-top: 25%;
+}
 
