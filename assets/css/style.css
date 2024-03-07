@@ -1110,9 +1110,9 @@ transition-delay: 100ms;
   background-color: var(--bg-color);
 }
 .bg-container{
-  box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.04);
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #00000040;
 }
 .big-videos{
@@ -1153,7 +1153,7 @@ transition-delay: 100ms;
 ---------------------------------------*/
 
 .faq-section{
-  height: 100vh;
+  height: 88vh;
   padding-top: 120px;
   background-color: var(--bg-color);
 }
@@ -1230,4 +1230,34 @@ transition-delay: 100ms;
 	display: block;
 	max-width: 90%;
 	margin: 5px auto;
+}
+
+
+
+/*---------------------------------------
+    ## Announcement PAGE 
+---------------------------------------*/
+
+.announcement-section{
+  height: 88vh;
+  padding-top: 120px;
+  background-color: var(--bg-color);
+}
+.announcement-row-container{
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #00000028;
+  margin-top: 20px;
+  box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.01);
+}
+.announcement-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.announcement-item button{
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  border: none;
 }

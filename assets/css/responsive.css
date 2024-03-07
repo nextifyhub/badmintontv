@@ -32,5 +32,8 @@
       .videos_page{
         padding: 100px 20px 20px 20px !important;
       }
+      .announcement-item{
+        display: block !important;
+      }
   }
 
