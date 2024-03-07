@@ -1375,7 +1375,7 @@ input:checked + .slider:before {
   border: 1px dashed #fff;
   border-radius: 10px;
   gap: 20px;
-  background-color: #000;
+  background-color: #bf616a34;
   margin-top: 15px;
 }
 .account-delete-notification .fa-circle-question{
@@ -1436,14 +1436,21 @@ input:checked + .slider:before {
 }
 
 .checkbox-container .checkmark:after {
-  left: 11px;
-  top: 7px;
-  width: 5px;
+  left: 7px;
+  top: 5px;
+  width: 7px;
   height: 10px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.delete-btn{
+  background-color: var(--sub-btn-color);
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
 }
 
