@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Account - Badminton TV</title>
+    <title>Billing - Badminton TV</title>
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -60,62 +60,47 @@
                 </div>
                 <div class="col-lg-10 text-white bg-container">
                     <div class="announcement-row-container">
-                        <h3>Account details</h3>
+                        <h3>Payment methods</h3>
                         <hr>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <p>Full name</p>
-                                <p>Notifications</p>
+                        <div class="col-lg-6 billing-card">
+                            <div class="d-flex gap-4 align-items-start">
+                                <img class="pt-2" src="assets/img/visa.svg" alt="">
+                                <div>
+                                    <p>∗∗∗∗ ∗∗∗∗ ∗∗∗∗ 4242</p>
+                                    <p>Card expires at 12/2034</p>
+                                </div>
                             </div>
-                            <div class="col-lg-8">
-                                <p>freelancer one</p>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                  </label>
+                            <div>
+                                <button class="delete-btn mt-2">Delete</button>
+                                <button class="btn">Edit</button>
                             </div>
                         </div>
                     </div>
                     <div class="announcement-row-container">
-                        <h3>Sign-in Method</h3>
+                        <h3>Billing History</h3>
                         <hr>
-                        <div class="mail-change">
-                            <div>
-                                <h5>Email address</h5>
-                                <p>one@badmintontv.com</p>
-                            </div>
-                            <div>
-                                <button class="btn">Change email</button>
-                            </div>
+                        <div class="table-responsive">
+                            <table class="table table-theme table-striped table-hover">
+                                <thead style="background-color: var(--main-color);">
+                                  <tr>
+                                    <th scope="col">Payment methods</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td> Credit card </td>
+                                    <td>Feb 05, 2024</td>
+                                    <td>Invoice for February 2024 </td>
+                                    <td>$3.75</td>
+                                    <td> <span style="background-color: var(--main-color); border-radius: 3px; padding: 1px 10px">Paid</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
                         </div>
-                        <div class="password-change">
-                            <div>
-                                <h5>Password</h5>
-                                <p>*************</p>
-                            </div>
-                            <div>
-                                <button class="btn">Reset Password</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="announcement-row-container">
-                        <h3>Delete account</h3>
-                        <hr>
-                       <div class="account-delete-notification">
-                        <div>
-                            <i class="fa-solid fa-circle-question"></i>
-                        </div>
-                        <div>
-                            <h5>Are you sure you want to delete your account?</h5>
-                            <p>Deleting your account is irreversible. Please make sure you are certain about this decision. </p>
-                        </div>
-                       </div>
-                       <label class="checkbox-container">I confirm my account deactivation
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                      <hr>
-                      <button class="delete-btn">Delete Account</button>
                     </div>
                 </div>
             </div>

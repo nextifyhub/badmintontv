@@ -133,6 +133,16 @@ button:focus {
 .btns:hover{
   color: #fff;
 }
+.delete-btn{
+  background: linear-gradient(#bf616a, #bf616a) padding-box,
+  radial-gradient(circle, rgba(191,97,106,1) 0%, rgba(226,182,135,1) 0%, rgba(191,97,106,1) 100%) border-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  padding: 6px 20px;
+  color: #fff;
+  font-size: 17px;
+  display: inline-block;
+}
 .btn-border{
   padding: 4px;
   border: 2px solid #000;
@@ -142,7 +152,7 @@ button:focus {
   radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(135,191,207,1) 100%, rgba(135,191,207,1) 100%) border-box;
   border: 3px solid transparent;
   border-radius: 10px;
-  padding: 5px 20px;
+  padding: 7px 20px;
   color: #fff;
   font-size: 16px;
 }
@@ -1419,7 +1429,7 @@ input:checked + .slider:before {
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background-color: var(--main-color)
+  background-color: var(--sub-btn-color)
 }
 
 .checkmark:after {
@@ -1437,7 +1447,7 @@ input:checked + .slider:before {
 
 .checkbox-container .checkmark:after {
   left: 7px;
-  top: 5px;
+  top: 4px;
   width: 7px;
   height: 10px;
   border: solid white;
@@ -1446,11 +1456,18 @@ input:checked + .slider:before {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.delete-btn{
-  background-color: var(--sub-btn-color);
-  color: #fff;
-  padding: 15px 25px;
-  border: none;
+.membership-section{
+  height: 88vh;
+  padding-top: 120px;
+}
+.billing-card{
+  padding: 20px;
+  border: 1px dashed #fff;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.billing-card p{
+  margin-bottom: .5rem;
 }
 
