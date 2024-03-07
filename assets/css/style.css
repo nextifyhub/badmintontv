@@ -1113,6 +1113,7 @@ transition-delay: 100ms;
   box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 20px;
+  border: 1px solid #00000040;
 }
 .big-videos{
   position: relative;
@@ -1145,3 +1146,88 @@ transition-delay: 100ms;
   padding-top: 25%;
 }
 
+
+
+/*---------------------------------------
+    ## FAQ PAGE 
+---------------------------------------*/
+
+.faq-section{
+  height: 100vh;
+  padding-top: 120px;
+  background-color: var(--bg-color);
+}
+
+/* ====== THE ACCORDION ====== */
+.accordion {
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+.accordion li {
+	list-style-type: none;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+}
+.accordion-button h2{
+  margin-left: 25px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+}
+.accordion-button {
+	position: relative;
+	display: block;
+	margin: 0;
+	width: 100%;
+	padding: 15px 0 !important;
+	background: var(--bg-color) !important;
+	border-bottom: 1px solid #dddddd29 !important;
+	cursor: pointer;
+}
+.accordion-button::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 45%;
+	height: 3px;
+	width: 14px;
+	margin-left: 1px;
+	background: #eee;
+	transform: rotate(90deg);
+	transition: 0.7s ease;
+}
+.accordion-button:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 45%;
+	height: 3px;
+	width: 15px;
+	margin-left: 0px;
+	background: #eee;
+}
+.accordion-button.active:after {
+	background: var(--main-color);
+}
+.accordion-button.active:before {
+	transform: rotate(-360deg) translateY(-20px);
+	opacity: 0;
+}
+.accordion-button.active h2,
+.accordion-button:focus h2 {
+	position: relative;
+	color: var(--main-color);
+}
+.accordion-panel {
+	display: none;
+	padding: 20px 0px;
+	background: var(--bg-color);
+	overflow: hidden;
+}
+.accordion-panel img {
+	display: block;
+	max-width: 90%;
+	margin: 5px auto;
+}
