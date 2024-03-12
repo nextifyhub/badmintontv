@@ -16,6 +16,7 @@
     --line-height30: 1.5;
     --sub-btn-color: #bf616a;
     --bg-color: #4c566a;
+    --bg-row-color: #25262835;
   }
 
   html {
@@ -1008,6 +1009,7 @@ transition-delay: 100ms;
 /*---------------------------------------
     ## TOURNAMENTS PAGE 
 ---------------------------------------*/
+
 .tournament {
 
   background-size: cover !important;
@@ -1197,7 +1199,7 @@ transition-delay: 100ms;
 	margin: 0;
 	width: 100%;
 	padding: 15px 0 !important;
-	background: var(--bg-color) !important;
+	background: transparent!important;
 	border-bottom: 1px solid #dddddd29 !important;
 	cursor: pointer;
 }
@@ -1238,7 +1240,7 @@ transition-delay: 100ms;
 .accordion-panel {
 	display: none;
 	padding: 20px 0px;
-	background: var(--bg-color);
+	background: transparent;
 	overflow: hidden;
 }
 .accordion-panel img {
@@ -1260,6 +1262,7 @@ transition-delay: 100ms;
 }
 .announcement-row-container{
   padding: 30px;
+  background-color: var(--bg-row-color);
   border-radius: 10px;
   border: 1px solid #00000030;
   margin-top: 20px;
@@ -1297,7 +1300,10 @@ transition-delay: 100ms;
 .account-section{
   padding-top: 120px;
 }
-
+.billing-section{
+  padding-top: 120px;
+  height: 85vh;
+}
 .switch {
   position: relative;
   display: inline-block;
