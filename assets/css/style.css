@@ -1131,7 +1131,7 @@ transition-delay: 100ms;
 	box-shadow: 8px 8px 0px 6px rgba(0, 0, 0, 0.4);
 	padding: 30px;
 	border-radius: 10px;
-	border: 1px solid #00000020;
+	border: 2px solid #0000003d;
 }
 .big-videos{
   position: relative;
