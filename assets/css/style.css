@@ -16,7 +16,8 @@
     --line-height30: 1.5;
     --sub-btn-color: #bf616a;
     --bg-color: #4c566a;
-    --bg-row-color: #25262835;
+    --bg-container-color:#434c5e;
+    --bg-row-color: #3b4252;
   }
 
   html {
@@ -165,7 +166,7 @@ button:focus {
     ## Header
 ---------------------------------------*/
 .navbar{
-  border-bottom: 1px solid #9190902f;
+  border-bottom: 1px solid #91909042;
 }
 .navbar-brand img{
   height: 50px;
@@ -1126,11 +1127,11 @@ transition-delay: 100ms;
   box-shadow: 5 5 5 0.3;
   background-color: var(--bg-color);
 }
-.bg-container{
-  box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.04);
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #00000037;
+.bg-container {
+	box-shadow: 8px 8px 0px 6px rgba(0, 0, 0, 0.4);
+	padding: 30px;
+	border-radius: 10px;
+	border: 1px solid #00000020;
 }
 .big-videos{
   position: relative;
@@ -1204,33 +1205,19 @@ transition-delay: 100ms;
 	cursor: pointer;
 }
 .accordion-button::before {
-	content: "";
 	position: absolute;
 	left: 0;
-	top: 45%;
-	height: 3px;
-	width: 14px;
-	margin-left: 1px;
-	background: #eee;
-	transform: rotate(90deg);
+	top: 25%;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f078";
 	transition: 0.7s ease;
-}
-.accordion-button:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 45%;
-	height: 3px;
-	width: 15px;
-	margin-left: 0px;
-	background: #eee;
-}
-.accordion-button.active:after {
-	background: var(--main-color);
+  color: #fff;
 }
 .accordion-button.active:before {
 	transform: rotate(-360deg) translateY(-20px);
-	opacity: 0;
+	opacity: 1;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f077";
+  top: 62%;
+  color: var(--main-color);
 }
 .accordion-button.active h2,
 .accordion-button:focus h2 {
@@ -1310,7 +1297,10 @@ transition-delay: 100ms;
   width: 60px;
   height: 34px;
 }
-
+.table-heading-color th{
+  color: var(--main-color);
+  font-family: var(--heading-font);
+}
 .switch input { 
   opacity: 0;
   width: 0;
@@ -1500,5 +1490,21 @@ input:checked + .slider:before {
 }
 .billing-card p{
   margin-bottom: .5rem;
+}
+
+
+
+/* SIDEBAR */
+.sidebar{
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  right: 0;
+  background-color: red;
+  top: 0;
+}
+.main{
+  right: 300px;
+  width: calc(100% - 300px);
 }
 
