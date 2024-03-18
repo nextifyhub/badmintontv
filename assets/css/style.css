@@ -224,13 +224,10 @@ button:focus {
 	color: var(--bg-color);
 }
 .nav-item .fa-regular {
-	font-size: 30px;
+	font-size: 35px;
 	color: #fff;
 }
 .navbar-custom.nav-sticky .notify_alert {
-	border: 3px solid #e5e9f0e7;
-}
-.navbar-custom.nav-sticky .user_alert {
 	border: 3px solid #e5e9f0e7;
 }
 
@@ -353,7 +350,9 @@ button:focus {
 	background-position: center center;
 	background-size: cover;
 }
-
+.subscribe-btn{
+	width: 110px;
+}
 .price-box {
 	position: relative;
 	padding: 50px 40px;
@@ -376,12 +375,12 @@ button:focus {
 .price-box .pricing-badge .badge {
 	float: right;
 	transform: rotate(45deg);
-	right: -64px;
-	top: 21px;
+	right: -66px;
+	top: 27px;
 	position: relative;
 	text-align: center;
-	width: 200px;
-	font-size: 18px;
+	width: 212px;
+	font-size: 14px;
 	margin: 0;
 	padding: 7px 10px;
 	font-weight: 500;
@@ -409,10 +408,42 @@ button:focus {
 .pricing-active-color {
 	border-color: white;
 }
-
+.subscribe-bitcoin-s {
+	margin-top: 20px;
+}
+.subscribe-bitcoin-s p {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.subscribe-bitcoin-s .fa-solid {
+	color: red;
+	font-size: 10px;
+}
+.subscribe-bitcoin-s .fa-brands {
+	color: #F7931A;
+	font-size: 30px;
+}
+.subscribe-bitcoin-p {
+	margin-top: 20px;
+}
+.subscribe-bitcoin-p p {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	color: white;
+}
+.subscribe-bitcoin-p .fa-solid {
+	color: red;
+	font-size: 10px;
+}
+.subscribe-bitcoin-p .fa-brands {
+	color: #F7931A;
+	font-size: 30px;
+}
 .pricing-title {
 	font-size: 25px;
-	color: var(--main-color);
+	color: gold;
 }
 
 /* NEW SUBSCRIPTION CODE  */
@@ -1024,12 +1055,12 @@ button:focus {
     ## TOURNAMENTS PAGE 
 ---------------------------------------*/
 
-.tournament {
-	background-size: cover !important;
-	align-self: center;
-	position: relative !important;
-	background-position: center center;
-	padding: 120px 0;
+.tournament-list {
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+.tournament-grid {
+	padding: 100px 0;
 }
 
 .modal {
@@ -1057,7 +1088,13 @@ button:focus {
 	font-size: 20px;
 	cursor: pointer;
 }
-
+.tournament-table-heding{
+	font-family: var(--heading-font);
+	font-weight: bold;
+}
+.filter-col {
+	padding-right: 0 !important;
+}
 /* Style button to open modal */
 .btn {
 	cursor: pointer;
@@ -1098,6 +1135,10 @@ button:focus {
 	padding: 5px;
 	border-radius: 3px;
 	font-size: 12px;
+}
+.right-video-scroll{
+	overflow-y: scroll;
+	height: 76vh;
 }
 .video-matches-tag {
 	position: absolute;
@@ -1294,10 +1335,11 @@ button:focus {
 ---------------------------------------*/
 .account-section {
 	padding-top: 120px;
+	padding-bottom: 30px;
 }
 .billing-section {
 	padding-top: 120px;
-	height: 85vh;
+	height: 88vh;
 }
 .switch {
 	position: relative;
