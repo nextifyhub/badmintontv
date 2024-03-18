@@ -440,6 +440,8 @@ button:focus {
 .subscribe-bitcoin-p .fa-brands {
 	color: #F7931A;
 	font-size: 30px;
+	background-color: #fff;
+	border-radius: 50%;
 }
 .pricing-title {
 	font-size: 25px;
