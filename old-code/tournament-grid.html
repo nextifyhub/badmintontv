@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament - Badminton TV</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- START  NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand logo text-uppercase" href="index.html">
+                <img src="assets/img/Logo.png" alt=""  />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="assets/img/hamburger.png" alt="" height="50">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-center" id="navbar-navlist">
+                    <li class="nav-item">
+                        <img src="assets/img/USA-Flag.png" alt="USA Flag" height="20">
+                    </li>
+                    <li class="nav-item mx-4 notification text-white">
+                        <div>
+                          <a class="notification_icon" href="#" onclick="toggleNotificationBox()">
+                              <i class="fa-regular fa-bell" id="notificationIcon"></i>
+                          </a>
+                      </div>
+                      <div class="notification_box" id="notificationBox">
+                          <h3>Notifications</h3><hr>
+                          <div class="alert alert-danger alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                          <div class="alert alert-primary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                          <div class="alert alert-secondary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                      </div>
+                  </li>
+                      <li class="nav-item">
+                        <div class="user_icon">
+                          <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                          <div class="user_alert"></div>
+                        </div>
+                      </li>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- TOURNAMENT SECTION START -->
+    <section class="tournament-grid section-bg">
+        <div class="container-fluid rounded-3 pt-4" style="background-color: var(--bg-color)">
+            <div class="icons d-flex justify-content-between align-items-center">
+                <div>
+                    <h3 class="text-white">Matches</h3>
+                </div>               
+                <div class=" d-flex align-items-center gap-3">
+                    <a href="tournament.html"><img src="assets/img/icon/List_View.png" alt="" height="36"></a>
+                    <a href="tournament-grid.html"><img src="assets/img/icon/grey-grid-icon.png" alt="" height="36"></a>
+                    <div style="margin-left: 20px !important;">
+                        <!-- Button trigger modal -->
+                        <a href="#"><img  onclick="openRightModal()" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+                        
+                        <!-- Modal -->
+                        <div id="exampleModal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title pb-2">Filter</h5>
+                                    <span class="close" onclick="closeRightModal()"><i class="fa-solid fa-xmark"></i></span>
+                                </div>
+                                <div class="modal-body">
+                                    <form >
+
+                                        <p>General</p>
+                                        <!-- Year  -->
+                                        <div class="multiSelect">
+                                            <select multiple class="multiSelect_field" data-placeholder="Year">
+                                              <option value="2024">2024</option>
+                                              <option value="2023">2023</option>
+                                              <option value="2022">2022</option>
+                                              <option value="2021">2021</option>
+                                              <option value="2020">2020</option>
+                                            </select>
+                                          </div>
+
+                                          <!-- Tournament  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Tournament">
+                                              <option value="2023 China Masters">2023 China Masters</option>
+                                              <option value="2023 Korea Open">2023 Korea Open</option>
+                                              <option value="2023 Taipei Open 2">2023 Taipei Open 2</option>
+                                              <option value="2023 Singapore Open">2023 Singapore Open</option>
+                                              <option value="2019 Sudirman Cup">2019 Sudirman Cup</option>
+                                            </select>
+                                          </div>
+
+                                          <!-- Country  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Country">
+                                              <option value="China">China</option>
+                                              <option value="Korea">Korea</option>
+                                              <option value="Taipei">Taipei</option>
+                                              <option value="Singapore">Singapore</option>
+                                              <option value="Sudirman">Sudirman</option>
+                                            </select>
+                                          </div>
+
+
+                                          <!-- Discipline  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Discipline">
+                                              <option value="Men's Singles">Men's Singles</option>
+                                              <option value="Women's Singles">Women's Singles</option>
+                                              <option value="Men's Doubles">Men's Doubles</option>
+                                              <option value="Women's Doubles">Women's Doubles</option>
+                                              <option value="Mixed doubles">Mixed doubles</option>
+                                            </select>
+                                          </div>
+
+
+                                          <!-- Round  -->
+                                          <div class="multiSelect my-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Round">
+                                              <option value="Finals">Finals</option>
+                                              <option value="Semi-Finals">Semi-Finals</option>
+                                              <option value="Quarter-Finals">Quarter-Finals</option>
+                                              <option value="Round of 16">Round of 16</option>
+                                              <option value="Round of 32">Round of 32</option>
+                                              <option value="Round of 64">Round of 64</option>
+                                              <option value="Round 3">Round 3</option>
+                                              <option value="Round 2">Round 2</option>
+                                              <option value="Round 1">Round 1</option>
+                                              <option value="Day 6">Day 6</option>
+                                              <option value="Day 5">Day 5</option>
+                                              <option value="Day 4">Day 4</option>
+                                              <option value="Day 3">Day 3</option>
+                                              <option value="Day 2">Day 2</option>
+                                              <option value="Day 1">Day 1</option>
+                                              <option value="Group Stage">Group Stage</option>
+                                            </select>
+                                          </div>
+
+
+                                          <hr>
+                                          <p>Athletes</p>
+
+                                          <!-- Single Players  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Single Players">
+                                              <option value="Beiwen ZHANG">Beiwen ZHANG</option>
+                                              <option value="Pitchamon OPATNIPUTH">Pitchamon OPATNIPUTH</option>
+                                              <option value="CHEN Tang Jie">CHEN Tang Jie</option>
+                                              <option value="TOH Ee Wei">TOH Ee Wei</option>
+                                              <option value="CHIU Hsiang Chieh">CHIU Hsiang Chieh</option>
+                                              <option value="LIN Xiao Min">LIN Xiao Min</option>
+                                            </select>
+                                          </div>
+
+                                          <!-- Double Teams  -->
+                                          <div class="multiSelect mt-3">
+                                            <select multiple class="multiSelect_field" data-placeholder="Double Teams">
+                                              <option value="CHEN Tang Jie / TOH Ee Wei">CHEN Tang Jie / TOH Ee Wei</option>
+                                              <option value="CHIU Hsiang Chieh / LIN Xiao Min">CHIU Hsiang Chieh / LIN Xiao Min</option>
+                                              <option value="Benyapa AIMSAARD / Nuntakarn AIMSAARD">Benyapa AIMSAARD / Nuntakarn AIMSAARD</option>
+                                              <option value="Mayu MATSUMOTO / Wakana NAGAHARA">Mayu MATSUMOTO / Wakana NAGAHARA</option>
+                                              <option value="TANG Chun Man / TSE Ying Suet">TANG Chun Man / TSE Ying Suet</option>
+                                              <option value="YE Hong Wei / LEE Chia Hsin">YE Hong Wei / LEE Chia Hsin</option>
+                                            </select>
+                                          </div>
+
+                                          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
+                                              <g stroke-linecap="round" stroke-linejoin="round">
+                                                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                                              </g>
+                                            </symbol>
+                                          </svg>
+
+
+                                          <div class="form-check pt-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              Versus
+                                            </label> 
+                                            <div class="tooltips"><i class="fa-solid fa-question"></i>
+                                              <span class="tooltiptext">Tooltip text</span>
+                                            </div>
+                                          </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="color: #ffffff8e;">
+
+            <div class="video-section">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+            <!-- Korea Section  -->
+            <div class="video-section">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+
+
+
+            <!-- 2023 Taipei Open 2 Section  -->
+            <div class="video-section">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+            <!-- 2023 Singapore Open Section  -->
+            <div class="video-section">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="video-box">
+                            <div class="video-preview">
+                                <video preload="auto" width="100%" autoplay muted>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-date">Jun 23, 2023</div>
+                                <div class="video-matches-tag">Finall</div>
+                                <div class="players-tag">Mixed's Doubles </div>
+                            </div>
+                            <div class="video-bottom-box">
+                                <a href="#"><p class="video-title">CHEN Tang Jie / TOH Ee Wei (MAS) vs CHIU Hsiang Chieh / LIN Xiao Min (TPE)</p></a>
+                                <p class="video-country-tag"><a href="#">2023 Taipei Open 2</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- TOURNAMENT SECTION END -->
+    
+
+   <!-- FOOTER START  -->
+   <section class="footer pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <ul class="d-flex justify-content-center gap-4 text-white">
+                <li><a href="Announcement.html">Announcements</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="terms-of-use.html">Terms Of Use</a></li>
+                <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
+                <li><a href="privacy-policy.html">Privacy policy</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- END FOOTER  -->
+
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script>
+
+
+// NOtification 
+
+var notificationBox = document.getElementById("notificationBox");
+        notificationBox.style.display = "none";
+
+        function toggleNotificationBox() {
+            var notificationIcon = document.getElementById("notificationIcon");
+
+            if (notificationBox.style.display === "none") {
+                notificationBox.style.display = "block";
+                notificationIcon.classList.add("active-icon");
+            } else {
+                notificationBox.style.display = "none";
+                notificationIcon.classList.remove("active-icon");
+            }
+        }
+
+
+
+        // navbar icons footer
+
+        function openRightModal() {
+          var modal = document.getElementById('exampleModal');
+          var videoSections = document.querySelectorAll('.video-section')
+          var navbar = Array.from(document.getElementsByClassName('navbar'));
+          var icons = Array.from(document.getElementsByClassName('icons'));
+          var footer = Array.from(document.getElementsByClassName('footer'));
+
+          var elements = [...videoSections, ...navbar, ...icons, ...footer];
+
+          var sidebarWidth = 420; 
+          var videoSectionWidth = 'calc(100% - ' + sidebarWidth + 'px)';
+         
+          elements.forEach(function(section) {
+            section.style.transition = 'all 0.5s ease';
+            section.style.width = videoSectionWidth;
+          });
+
+          modal.style.width = '450px';
+          modal.style.height = '100vh';
+          modal.style.right = '0';
+          modal.style.left = 'auto';
+          modal.style.transition = 'right .5s ease';
+          modal.style.display = 'block';
+        }
+      
+        function closeRightModal() {
+          var modal = document.getElementById('exampleModal');
+          var videoSections = document.querySelectorAll('.video-section')
+          var navbar = Array.from(document.getElementsByClassName('navbar'));
+          var icons = Array.from(document.getElementsByClassName('icons'));
+          var footer = Array.from(document.getElementsByClassName('footer'));
+          var elements = [...videoSections, ...navbar, ...icons, ...footer];
+         
+          elements.forEach(function(section) {
+            section.style.transition = 'all 0.5s ease';
+            section.style.width = '100%';
+          });
+
+          
+          
+          modal.style.right = '-100%';
+          modal.style.left = 'auto';
+          modal.style.transition = 'right .5s ease';
+        }
+
+        
+
+        // Filter jQuery  CODE 
+
+        jQuery(function() {
+        jQuery('.multiSelect').each(function(e) {
+            var self = jQuery(this);
+            var field = self.find('.multiSelect_field');
+            var fieldOption = field.find('option');
+            var placeholder = field.attr('data-placeholder');
+
+            field.hide().after(`<div class="multiSelect_dropdown"></div>
+                                <span class="multiSelect_placeholder">` + placeholder + `</span>
+                                <ul class="multiSelect_list"></ul>
+                                <span class="multiSelect_arrow"></span>`);
+            
+            fieldOption.each(function(e) {
+            jQuery('.multiSelect_list').append(`<li class="multiSelect_option" data-value="`+jQuery(this).val()+`">
+                                                    <a class="multiSelect_text">`+jQuery(this).text()+`</a>
+                                                </li>`);
+            });
+            
+            var dropdown = self.find('.multiSelect_dropdown');
+            var list = self.find('.multiSelect_list');
+            var option = self.find('.multiSelect_option');
+            var optionText = self.find('.multiSelect_text');
+            
+            dropdown.attr('data-multiple', 'true');
+            list.css('top', dropdown.height() + 5);
+            
+            option.click(function(e) {
+            var self = jQuery(this);
+                    e.stopPropagation();
+                self.addClass('-selected');
+                field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
+            dropdown.append(function(e) {
+                return jQuery('<span class="multiSelect_choice">'+ self.children().text() +'<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function(e) {
+                var self = jQuery(this);
+                e.stopPropagation();
+                self.remove();
+                list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
+                list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                field.find('option:contains(' + self.text() + ')').prop('selected', false);
+                if (dropdown.children(':visible').length === 0) {
+                    dropdown.removeClass('-hasValue');
+                }
+                });
+            }).addClass('-hasValue');
+                list.css('top', dropdown.height() + 5);
+                if (!option.not('.-selected').length) {
+                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                }
+            });
+            
+            dropdown.click(function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            dropdown.toggleClass('-open');
+            list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
+            });
+            
+            jQuery(document).on('click touch', function(e) {
+                if (dropdown.hasClass('-open')) {
+                    dropdown.toggleClass('-open');
+                    list.removeClass('-open');
+                }
+            });
+        });
+        });
+        
+      </script>
+</body>
+</html>

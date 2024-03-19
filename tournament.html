@@ -73,7 +73,7 @@
                           <a href="tournament-grid.html"><img src="assets/img/icon/Grid_View.png" alt="" height="36"></a>
                           <div style="margin-left: 20px !important;">
                               <!-- Button trigger modal -->
-                              <a href="#"><img  onclick="openRightModal()" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+                              <a href="#" class="filter-link"><img id="filterImage"  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
                               
                               <!-- Modal -->
                               <div id="exampleModal" class="modal">
@@ -293,7 +293,50 @@ var notificationBox = document.getElementById("notificationBox");
             }
         }
 
-        function openRightModal() {
+        // opened the modal with tournament-grid.html page
+         window.onload = function() {
+            var openModal = localStorage.getItem('openModal');
+            if (openModal === 'true') {
+                var modal = document.getElementById('exampleModal');
+                var modal = document.getElementById('exampleModal');
+                var tableContainer = Array.from(document.getElementsByClassName('table-container'))
+                var navbar = Array.from(document.getElementsByClassName('navbar'));
+                var footer = Array.from(document.getElementsByClassName('footer'));
+
+                var elements = [...tableContainer, ...navbar, ...footer];
+
+                var filterLink = document.querySelector('.filter-link');
+                filterLink.style.backgroundColor = 'gray';
+
+                var sidebarWidth = 420; 
+                var tableContainerWidth = 'calc(100% - ' + sidebarWidth + 'px)';
+
+                elements.forEach(function(section) {
+                  section.style.transition = 'all ease';
+                  section.style.width = tableContainerWidth;
+                }); 
+
+
+                modal.style.width = '450px';
+                modal.style.height = '100vh';
+                modal.style.right = '0';
+                modal.style.left = 'auto';
+                modal.style.transition = 'right 0.5s ease';
+                modal.style.display = 'block';
+       
+                localStorage.removeItem('openModal'); // Reset the flag
+            }
+        };
+
+        function openRightModal(event) {
+          event.stopPropagation(event);
+
+          var filterImage = document.getElementById('filterImage');
+            if (filterImage) {
+                filterImage.src = 'assets/img/icon/gray-filter.png';
+            }
+
+
           var modal = document.getElementById('exampleModal');
           var tableContainer = Array.from(document.getElementsByClassName('table-container'))
           var navbar = Array.from(document.getElementsByClassName('navbar'));
@@ -309,6 +352,7 @@ var notificationBox = document.getElementById("notificationBox");
             section.style.width = tableContainerWidth;
           }); 
 
+
           modal.style.width = '450px';
           modal.style.height = '100vh';
           modal.style.right = '0';
@@ -318,6 +362,12 @@ var notificationBox = document.getElementById("notificationBox");
         }
       
         function closeRightModal() {
+
+          var filterImage = document.getElementById('filterImage');
+            if (filterImage) {
+                filterImage.src = 'assets/img/icon/filter.png';
+            }
+
           var modal = document.getElementById('exampleModal');
           var modal = document.getElementById('exampleModal');
           var tableContainer = Array.from(document.getElementsByClassName('table-container'))
@@ -332,11 +382,27 @@ var notificationBox = document.getElementById("notificationBox");
             section.style.width = '100%';
           });
 
-
           modal.style.right = '-100%';
           modal.style.left = 'auto';
-          modal.style.transition = 'right 0.5s ease';
+          modal.style.transition = 'right 0.5s ease';    
         }
+
+
+        // Function to close the modal when clicking outside
+        function closeRightModalOnClickOutside(event) {
+          
+
+
+            var modal = document.getElementById('exampleModal');
+            var modalContent = modal.querySelector('.modal-content');
+            var isClickInsideModal = modalContent.contains(event.target);
+            if (!isClickInsideModal) {
+                closeRightModal(); // Call your close modal function
+            }
+        }
+
+        // var closeModal = document.querySelector('.close-modal')
+       document.body.addEventListener('click', closeRightModalOnClickOutside);
 
 
         // Filter jQuery  CODE 

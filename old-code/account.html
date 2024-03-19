@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Badminton TV</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- START  NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand logo text-uppercase" href="index.html">
+                <img src="assets/img/Logo.png" alt=""  />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="assets/img/hamburger.png" alt="" height="50">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-center" id="navbar-navlist">
+                    <li class="nav-item">
+                        <img src="assets/img/USA-Flag.png" alt="USA Flag" height="20">
+                    </li>
+                    <li class="nav-item mx-4 notification text-white">
+                        <div>
+                          <a class="notification_icon" href="#" onclick="toggleNotificationBox()">
+                              <i class="fa-regular fa-bell" id="notificationIcon"></i>
+                          </a>
+                      </div>
+                      <div class="notification_box" id="notificationBox">
+                          <h3>Notifications</h3><hr>
+                          <div class="alert alert-danger alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                          <div class="alert alert-primary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                          <div class="alert alert-secondary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                      </div>
+                  </li>
+                    <li class="nav-item">
+                      <div class="user_icon">
+                        <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                        <div class="user_alert"></div>
+                      </div>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- Announcement START  -->
+
+    <section class="account-section">
+        <div class="bg-overlay"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 ">
+                    <div class="overview bg-container me-4 text-white ">
+                        <a href="account.html" class="h6"><p><i class="fa-solid fa-house-user me-2"></i>Overview</p></a>
+                        <a href="membership.html" class="h6"><p><i class="fa-regular fa-address-card me-2"></i>Membership</p></a>
+                        <a href="billing.html" class="h6"><p><i class="fa-regular fa-credit-card me-2"></i>Billing</p></a>
+                    </div>
+                </div>
+                <div class="col-lg-10 text-white bg-container">
+                    <div class="announcement-row-container mt-0">
+                        <h3>Overview</h3>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <p>Announcements</p>
+                                <p class="pt-3">New Videos</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </p>
+                                  <p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-row-container">
+                        <h3>Sign-in Method</h3>
+                        <hr>
+                        <div class="mail-change">
+                            <div>
+                                <h5>Email address</h5>
+                                <p>one@badmintontv.com</p>
+                            </div>
+                            <div>
+                                <button class="btn">Change email</button>
+                            </div>
+                        </div>
+                        <div class="password-change">
+                            <div>
+                                <h5>Password</h5>
+                                <p>*************</p>
+                            </div>
+                            <div>
+                                <button class="btn">Reset Password</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-row-container">
+                        <h3>Delete account</h3>
+                        <hr>
+                       <div class="account-delete-notification">
+                        <div>
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <div>
+                            <h5>Are you sure you want to delete your account?</h5>
+                            <p>Deleting your account is irreversible. Please make sure you are certain about this decision. </p>
+                        </div>
+                       </div>
+                       <label class="checkbox-container">I confirm my account deactivation
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <hr>
+                      <button class="delete-btn">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcement END  -->
+
+     <!-- FOOTER START  -->
+     <section class="footer pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <ul class="d-flex justify-content-center gap-4 text-white">
+                    <li><a href="Announcement.html">Announcements</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="terms-of-use.html">Terms Of Use</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- END FOOTER  -->
+
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script>
+        // NOtification 
+
+var notificationBox = document.getElementById("notificationBox");
+        notificationBox.style.display = "none";
+
+        function toggleNotificationBox() {
+            var notificationIcon = document.getElementById("notificationIcon");
+
+            if (notificationBox.style.display === "none") {
+                notificationBox.style.display = "block";
+                notificationIcon.classList.add("active-icon");
+            } else {
+                notificationBox.style.display = "none";
+                notificationIcon.classList.remove("active-icon");
+            }
+        }
+    </script>
+</body>
+</html>

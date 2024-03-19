@@ -54,7 +54,7 @@
 
     <!-- TOURNAMENT SECTION START -->
     <section class="tournament-grid section-bg">
-        <div class="container-fluid rounded-3 pt-4" style="background-color: var(--bg-color)">
+        <div class="close-modal container-fluid rounded-3 pt-4" style="background-color: var(--bg-color)">
             <div class="icons d-flex justify-content-between align-items-center">
                 <div>
                     <h3 class="text-white">Matches</h3>
@@ -63,8 +63,13 @@
                     <a href="tournament.html"><img src="assets/img/icon/List_View.png" alt="" height="36"></a>
                     <a href="tournament-grid.html"><img src="assets/img/icon/grey-grid-icon.png" alt="" height="36"></a>
                     <div style="margin-left: 20px !important;">
+
                         <!-- Button trigger modal -->
-                        <a href="#"><img  onclick="openRightModal()" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+                       <!-- <a href="#" class="filter-link"><img  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>  -->
+
+                        <div class="filter-link">
+                            <a href="#"><img id="filterImage" onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+                        </div> 
                         
                         <!-- Modal -->
                         <div id="exampleModal" class="modal">
@@ -622,7 +627,15 @@ var notificationBox = document.getElementById("notificationBox");
 
         // navbar icons footer
 
-        function openRightModal() {
+        function openRightModal(event) {
+            event.stopPropagation();
+
+            var filterImage = document.getElementById('filterImage');
+    if (filterImage) {
+        filterImage.src = 'assets/img/icon/gray-filter.png'; // Update the image source as per your requirements
+    }
+
+
           var modal = document.getElementById('exampleModal');
           var videoSections = document.querySelectorAll('.video-section')
           var navbar = Array.from(document.getElementsByClassName('navbar'));
@@ -630,6 +643,9 @@ var notificationBox = document.getElementById("notificationBox");
           var footer = Array.from(document.getElementsByClassName('footer'));
 
           var elements = [...videoSections, ...navbar, ...icons, ...footer];
+
+        //   var filterLink = document.querySelector('.filter-container');
+        //   filterLink.style.backgroundColor = '#e5e5';
 
           var sidebarWidth = 420; 
           var videoSectionWidth = 'calc(100% - ' + sidebarWidth + 'px)';
@@ -645,10 +661,23 @@ var notificationBox = document.getElementById("notificationBox");
           modal.style.left = 'auto';
           modal.style.transition = 'right .5s ease';
           modal.style.display = 'block';
+
+
+          //   open Modal on page 2
+          localStorage.setItem('openModal', 'true');            
         }
       
         function closeRightModal() {
           var modal = document.getElementById('exampleModal');
+
+      
+          var filterImage = document.getElementById('filterImage');
+            if (filterImage) {
+                filterImage.src = 'assets/img/icon/filter.png';
+            }
+
+        
+
           var videoSections = document.querySelectorAll('.video-section')
           var navbar = Array.from(document.getElementsByClassName('navbar'));
           var icons = Array.from(document.getElementsByClassName('icons'));
@@ -660,12 +689,24 @@ var notificationBox = document.getElementById("notificationBox");
             section.style.width = '100%';
           });
 
-          
-          
           modal.style.right = '-100%';
           modal.style.left = 'auto';
           modal.style.transition = 'right .5s ease';
         }
+
+
+        // Function to close the modal when clicking outside
+        function closeRightModalOnClickOutside(event) {
+            var modal = document.getElementById('exampleModal');
+            var modalContent = modal.querySelector('.modal-content');
+            var isClickInsideModal = modalContent.contains(event.target);
+            if (!isClickInsideModal) {
+                closeRightModal(); // Call your close modal function
+            }
+        }
+
+        // var closeModal = document.querySelector('.close-modal')
+       document.body.addEventListener('click', closeRightModalOnClickOutside);
 
         
 
