@@ -1180,7 +1180,7 @@ button:focus {
 	background-color: var(--bg-color);
 }
 .bg-container {
-	box-shadow: 8px 8px 0px 6px rgba(0, 0, 0, 0.4);
+	/* box-shadow: 8px 8px 0px 6px rgba(0, 0, 0, 0.4); */
 	padding: 30px;
 	border-radius: 10px;
 	border: 2px solid #0000003d;
