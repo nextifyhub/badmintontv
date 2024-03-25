@@ -30,7 +30,7 @@
                     </li>
                     <li class="nav-item">
                         <div class="user_icon">
-                            <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                            <a href="#"><img src="assets/img/icon/Login.png" alt=""></a>
                             <div class="user_alert"></div>
                           </div>
                     </li>
@@ -166,7 +166,7 @@
                         <h3 class="mt-2 big-title mobile-title">Easily find your favorite matches to watch</h3>
                         <!-- <img src="assets/img/underline.png" alt="" width="50%"> -->
                     </div>
-                    <div class="my-5">
+                    <div class="my-4 pt-2">
                         <img class="rounded-3" src="assets/img/registration-bg.jpg" alt="" width="100%">
                     </div>
                 </div>
@@ -239,7 +239,7 @@
 
 <!-- END FOOTER  -->
 
-
+    <script src="assets/js/jQuery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/main.js"></script>
 
@@ -259,6 +259,16 @@
         };
         updateCounter();
         });
+
+        // Collapse Header 
+        $('.navbar-toggler').on('click', function () {
+            if (!$('#navbarCollapse').hasClass('show')) {
+                $('#navbar').addClass('navbar-red-bg');
+            } else {
+                $('#navbar').removeClass('navbar-red-bg');
+            }
+        });
+
     </script>
 </body>
 </html>

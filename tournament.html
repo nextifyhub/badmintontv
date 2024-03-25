@@ -32,8 +32,8 @@
                     <li class="nav-item mx-4 notification text-white">
                           <div>
                             <a class="notification_icon" href="#" onclick="toggleNotificationBox()">
-                                <i class="fa-regular fa-bell" id="notificationIcon"></i>
-                            </a>
+                              <img src="assets/img/icon/Notification.png" alt="" id="notificationIcon">
+                          </a>
                         </div>
                         <div class="notification_box" id="notificationBox">
                             <h3>Notifications</h3><hr>
@@ -44,7 +44,7 @@
                     </li>
                     <li class="nav-item">
                       <div class="user_icon">
-                        <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                        <a href="#"><img src="assets/img/icon/Login.png" alt=""></a>
                         <div class="user_alert"></div>
                       </div>
                     </li>
@@ -54,11 +54,151 @@
     <!-- END NAVBAR -->
 
     <!-- TOURNAMENT SECTION START -->
-    <section class="tournament-list section-bg">
+    <section class="tournament-list">
         <div class="container-fluid rounded-3" style="background-color: var(--bg-color)">
+          <div >
+                        
+            <div class="table-container tournament-icon-bar">
 
-          
-            <div class="table-container table-responsive pb-3">
+              <div class="d-flex align-items-center justify-content-end gap-2">
+                <a href="tournament.html"><img src="assets/img/icon/grey-list-icon.png" alt="" height="36"></a>
+              <a href="tournament-grid.html"><img src="assets/img/icon/Grid_View.png" alt="" height="36"></a>
+              <!-- Button trigger modal -->
+              <a href="#" class="filter-link ms-4"><img id="filterImage"  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+              </div>
+                    <!-- Modal -->
+                    <div id="exampleModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title pb-2">Filter</h5>
+                                <span class="close" onclick="closeRightModal()"><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                            <div class="modal-body">
+                                <form >
+                                    <p>General</p>
+                                    <!-- Year  -->
+                                    <div class="multiSelect">
+                                        <select multiple class="multiSelect_field" data-placeholder="Year">
+                                          <option value="2024">2024</option>
+                                          <option value="2023">2023</option>
+                                          <option value="2022">2022</option>
+                                          <option value="2021">2021</option>
+                                          <option value="2020">2020</option>
+                                        </select>
+                                      </div>
+
+                                      <!-- Tournament  -->
+                                      <div class="multiSelect mt-3">
+                                        <select multiple class="multiSelect_field" data-placeholder="Tournament">
+                                          <option value="2023 China Masters">2023 China Masters</option>
+                                          <option value="2023 Korea Open">2023 Korea Open</option>
+                                          <option value="2023 Taipei Open 2">2023 Taipei Open 2</option>
+                                          <option value="2023 Singapore Open">2023 Singapore Open</option>
+                                          <option value="2019 Sudirman Cup">2019 Sudirman Cup</option>
+                                        </select>
+                                      </div>
+
+                                      <!-- Country  -->
+                                      <div class="multiSelect mt-3">
+                                        <select multiple class="multiSelect_field" data-placeholder="Country">
+                                          <option value="China">China</option>
+                                          <option value="Korea">Korea</option>
+                                          <option value="Taipei">Taipei</option>
+                                          <option value="Singapore">Singapore</option>
+                                          <option value="Sudirman">Sudirman</option>
+                                        </select>
+                                      </div>
+
+
+                                      <!-- Discipline  -->
+                                      <div class="multiSelect mt-3">
+                                        <select multiple class="multiSelect_field" data-placeholder="Discipline">
+                                          <option value="Men's Singles">Men's Singles</option>
+                                          <option value="Women's Singles">Women's Singles</option>
+                                          <option value="Men's Doubles">Men's Doubles</option>
+                                          <option value="Women's Doubles">Women's Doubles</option>
+                                          <option value="Mixed doubles">Mixed doubles</option>
+                                        </select>
+                                      </div>
+
+
+                                      <!-- Round  -->
+                                      <div class="multiSelect my-3">
+                                        <select multiple class="multiSelect_field" data-placeholder="Round">
+                                          <option value="Finals">Finals</option>
+                                          <option value="Semi-Finals">Semi-Finals</option>
+                                          <option value="Quarter-Finals">Quarter-Finals</option>
+                                          <option value="Round of 16">Round of 16</option>
+                                          <option value="Round of 32">Round of 32</option>
+                                          <option value="Round of 64">Round of 64</option>
+                                          <option value="Round 3">Round 3</option>
+                                          <option value="Round 2">Round 2</option>
+                                          <option value="Round 1">Round 1</option>
+                                          <option value="Day 6">Day 6</option>
+                                          <option value="Day 5">Day 5</option>
+                                          <option value="Day 4">Day 4</option>
+                                          <option value="Day 3">Day 3</option>
+                                          <option value="Day 2">Day 2</option>
+                                          <option value="Day 1">Day 1</option>
+                                          <option value="Group Stage">Group Stage</option>
+                                        </select>
+                                      </div>
+
+
+                                      <hr>
+                                      <p>Athletes</p>
+
+                                      <!-- Single Players  -->
+                                      <div class="multiSelect mt-3">
+                                        <select multiple class="multiSelect_field" data-placeholder="Single Players">
+                                          <option value="Beiwen ZHANG">Beiwen ZHANG</option>
+                                          <option value="Pitchamon OPATNIPUTH">Pitchamon OPATNIPUTH</option>
+                                          <option value="CHEN Tang Jie">CHEN Tang Jie</option>
+                                          <option value="TOH Ee Wei">TOH Ee Wei</option>
+                                          <option value="CHIU Hsiang Chieh">CHIU Hsiang Chieh</option>
+                                          <option value="LIN Xiao Min">LIN Xiao Min</option>
+                                        </select>
+                                      </div>
+
+                                      <!-- Double Teams  -->
+                                      <div class="multiSelect mt-3">
+                                        <select multiple class="multiSelect_field" data-placeholder="Double Teams">
+                                          <option value="CHEN Tang Jie / TOH Ee Wei">CHEN Tang Jie / TOH Ee Wei</option>
+                                          <option value="CHIU Hsiang Chieh / LIN Xiao Min">CHIU Hsiang Chieh / LIN Xiao Min</option>
+                                          <option value="Benyapa AIMSAARD / Nuntakarn AIMSAARD">Benyapa AIMSAARD / Nuntakarn AIMSAARD</option>
+                                          <option value="Mayu MATSUMOTO / Wakana NAGAHARA">Mayu MATSUMOTO / Wakana NAGAHARA</option>
+                                          <option value="TANG Chun Man / TSE Ying Suet">TANG Chun Man / TSE Ying Suet</option>
+                                          <option value="YE Hong Wei / LEE Chia Hsin">YE Hong Wei / LEE Chia Hsin</option>
+                                        </select>
+                                      </div>
+
+                                      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
+                                          <g stroke-linecap="round" stroke-linejoin="round">
+                                              <line x1="18" y1="6" x2="6" y2="18"></line>
+                                              <line x1="6" y1="6" x2="18" y2="18"></line>
+                                          </g>
+                                        </symbol>
+                                      </svg>
+                                      <div class="form-check pt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          Versus
+                                        </label> 
+                                        <div class="tooltips"><i class="fa-solid fa-question"></i>
+                                          <span class="tooltiptext">Tooltip text</span>
+                                        </div>
+                                      </div>
+                                      
+                                </form>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="table-container table-responsive">
               <table class="table table-theme table-striped table-hover">
                   <thead>
                     <tr>
@@ -66,156 +206,7 @@
                       <th scope="col" class="tournament-table-heding">Date</th>
                       <th scope="col" class="tournament-table-heding"></th>
                       <th scope="col" class="tournament-table-heding">Location</th>
-                      <th scope="col" class="filter-col">
-                        
-                      <div >
-                        
-                      <div style="margin-left: 20px !important;">
-
-                        <div class="d-flex align-items-center justify-content-end gap-2">
-                          <a href="tournament.html"><img src="assets/img/icon/grey-list-icon.png" alt="" height="36"></a>
-                        <a href="tournament-grid.html"><img src="assets/img/icon/Grid_View.png" alt="" height="36"></a>
-                        <!-- Button trigger modal -->
-                        <a href="#" class="filter-link ms-4"><img id="filterImage"  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
-                        </div>
-                              
-                              
-                              <!-- Modal -->
-                              <div id="exampleModal" class="modal">
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h5 class="modal-title pb-2">Filter</h5>
-                                          <span class="close" onclick="closeRightModal()"><i class="fa-solid fa-xmark"></i></span>
-                                      </div>
-                                      <div class="modal-body">
-                                          
-                                        
-                                          <form >
-      
-                                              <p>General</p>
-                                              <!-- Year  -->
-                                              <div class="multiSelect">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Year">
-                                                    <option value="2024">2024</option>
-                                                    <option value="2023">2023</option>
-                                                    <option value="2022">2022</option>
-                                                    <option value="2021">2021</option>
-                                                    <option value="2020">2020</option>
-                                                  </select>
-                                                </div>
-      
-                                                <!-- Tournament  -->
-                                                <div class="multiSelect mt-3">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Tournament">
-                                                    <option value="2023 China Masters">2023 China Masters</option>
-                                                    <option value="2023 Korea Open">2023 Korea Open</option>
-                                                    <option value="2023 Taipei Open 2">2023 Taipei Open 2</option>
-                                                    <option value="2023 Singapore Open">2023 Singapore Open</option>
-                                                    <option value="2019 Sudirman Cup">2019 Sudirman Cup</option>
-                                                  </select>
-                                                </div>
-      
-                                                <!-- Country  -->
-                                                <div class="multiSelect mt-3">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Country">
-                                                    <option value="China">China</option>
-                                                    <option value="Korea">Korea</option>
-                                                    <option value="Taipei">Taipei</option>
-                                                    <option value="Singapore">Singapore</option>
-                                                    <option value="Sudirman">Sudirman</option>
-                                                  </select>
-                                                </div>
-      
-      
-                                                <!-- Discipline  -->
-                                                <div class="multiSelect mt-3">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Discipline">
-                                                    <option value="Men's Singles">Men's Singles</option>
-                                                    <option value="Women's Singles">Women's Singles</option>
-                                                    <option value="Men's Doubles">Men's Doubles</option>
-                                                    <option value="Women's Doubles">Women's Doubles</option>
-                                                    <option value="Mixed doubles">Mixed doubles</option>
-                                                  </select>
-                                                </div>
-      
-      
-                                                <!-- Round  -->
-                                                <div class="multiSelect my-3">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Round">
-                                                    <option value="Finals">Finals</option>
-                                                    <option value="Semi-Finals">Semi-Finals</option>
-                                                    <option value="Quarter-Finals">Quarter-Finals</option>
-                                                    <option value="Round of 16">Round of 16</option>
-                                                    <option value="Round of 32">Round of 32</option>
-                                                    <option value="Round of 64">Round of 64</option>
-                                                    <option value="Round 3">Round 3</option>
-                                                    <option value="Round 2">Round 2</option>
-                                                    <option value="Round 1">Round 1</option>
-                                                    <option value="Day 6">Day 6</option>
-                                                    <option value="Day 5">Day 5</option>
-                                                    <option value="Day 4">Day 4</option>
-                                                    <option value="Day 3">Day 3</option>
-                                                    <option value="Day 2">Day 2</option>
-                                                    <option value="Day 1">Day 1</option>
-                                                    <option value="Group Stage">Group Stage</option>
-                                                  </select>
-                                                </div>
-      
-      
-                                                <hr>
-                                                <p>Athletes</p>
-      
-                                                <!-- Single Players  -->
-                                                <div class="multiSelect mt-3">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Single Players">
-                                                    <option value="Beiwen ZHANG">Beiwen ZHANG</option>
-                                                    <option value="Pitchamon OPATNIPUTH">Pitchamon OPATNIPUTH</option>
-                                                    <option value="CHEN Tang Jie">CHEN Tang Jie</option>
-                                                    <option value="TOH Ee Wei">TOH Ee Wei</option>
-                                                    <option value="CHIU Hsiang Chieh">CHIU Hsiang Chieh</option>
-                                                    <option value="LIN Xiao Min">LIN Xiao Min</option>
-                                                  </select>
-                                                </div>
-      
-                                                <!-- Double Teams  -->
-                                                <div class="multiSelect mt-3">
-                                                  <select multiple class="multiSelect_field" data-placeholder="Double Teams">
-                                                    <option value="CHEN Tang Jie / TOH Ee Wei">CHEN Tang Jie / TOH Ee Wei</option>
-                                                    <option value="CHIU Hsiang Chieh / LIN Xiao Min">CHIU Hsiang Chieh / LIN Xiao Min</option>
-                                                    <option value="Benyapa AIMSAARD / Nuntakarn AIMSAARD">Benyapa AIMSAARD / Nuntakarn AIMSAARD</option>
-                                                    <option value="Mayu MATSUMOTO / Wakana NAGAHARA">Mayu MATSUMOTO / Wakana NAGAHARA</option>
-                                                    <option value="TANG Chun Man / TSE Ying Suet">TANG Chun Man / TSE Ying Suet</option>
-                                                    <option value="YE Hong Wei / LEE Chia Hsin">YE Hong Wei / LEE Chia Hsin</option>
-                                                  </select>
-                                                </div>
-      
-                                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                                                  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="iconX">
-                                                    <g stroke-linecap="round" stroke-linejoin="round">
-                                                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                                                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                                                    </g>
-                                                  </symbol>
-                                                </svg>
-                                                <div class="form-check pt-3">
-                                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                  <label class="form-check-label" for="flexCheckDefault">
-                                                    Versus
-                                                  </label> 
-                                                  <div class="tooltips"><i class="fa-solid fa-question"></i>
-                                                    <span class="tooltiptext">Tooltip text</span>
-                                                  </div>
-                                                </div>
-                                                
-                                          </form>
-                                          
-      
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                    
+                      <th scope="col" class="filter-col">                    
                     </th>
                     </tr>
                   </thead>
@@ -442,6 +433,15 @@ var notificationBox = document.getElementById("notificationBox");
                 }
             });
         });
+        });
+
+        // Collapse Header 
+        $('.navbar-toggler').on('click', function () {
+            if (!$('#navbarCollapse').hasClass('show')) {
+                $('#navbar').addClass('navbar-red-bg');
+            } else {
+                $('#navbar').removeClass('navbar-red-bg');
+            }
         });
 
         </script>

@@ -32,8 +32,8 @@
                     <li class="nav-item mx-4 notification text-white">
                       <div>
                         <a class="notification_icon" href="#" onclick="toggleNotificationBox()">
-                            <i class="fa-regular fa-bell" id="notificationIcon"></i>
-                        </a>
+                          <img src="assets/img/icon/Notification.png" alt="" id="notificationIcon">
+                      </a>
                     </div>
                     <div class="notification_box" id="notificationBox">
                         <h3>Notifications</h3><hr>
@@ -44,7 +44,7 @@
                 </li>
                     <li class="nav-item">
                       <div class="user_icon">
-                        <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                        <a href="#"><img src="assets/img/icon/Login.png" alt=""></a>
                         <div class="user_alert"></div>
                       </div>
                     </li>
@@ -386,6 +386,15 @@ var notificationBox = document.getElementById("notificationBox");
                 }
             });
         });
+        });
+
+        // Collapse Header 
+        $('.navbar-toggler').on('click', function () {
+            if (!$('#navbarCollapse').hasClass('show')) {
+                $('#navbar').addClass('navbar-red-bg');
+            } else {
+                $('#navbar').removeClass('navbar-red-bg');
+            }
         });
 
         </script>
