@@ -39,7 +39,7 @@
                             <h3>Notifications</h3><hr>
                             <div class="alert alert-danger alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
                             <div class="alert alert-primary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-                            <div class="alert alert-secondary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                            <div class="alert alert-danger alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -68,12 +68,17 @@
                       <th scope="col" class="tournament-table-heding">Location</th>
                       <th scope="col" class="filter-col">
                         
-                      <div class="d-flex align-items-center justify-content-end gap-3">
-                        <a href="tournament.html"><img src="assets/img/icon/grey-list-icon.png" alt="" height="36"></a>
-                          <a href="tournament-grid.html"><img src="assets/img/icon/Grid_View.png" alt="" height="36"></a>
-                          <div style="margin-left: 20px !important;">
-                              <!-- Button trigger modal -->
-                              <a href="#" class="filter-link"><img id="filterImage"  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+                      <div >
+                        
+                      <div style="margin-left: 20px !important;">
+
+                        <div class="d-flex align-items-center justify-content-end gap-2">
+                          <a href="tournament.html"><img src="assets/img/icon/grey-list-icon.png" alt="" height="36"></a>
+                        <a href="tournament-grid.html"><img src="assets/img/icon/Grid_View.png" alt="" height="36"></a>
+                        <!-- Button trigger modal -->
+                        <a href="#" class="filter-link ms-4"><img id="filterImage"  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
+                        </div>
+                              
                               
                               <!-- Modal -->
                               <div id="exampleModal" class="modal">
@@ -293,50 +298,17 @@ var notificationBox = document.getElementById("notificationBox");
             }
         }
 
-        // opened the modal with tournament-grid.html page
-         window.onload = function() {
-            var openModal = localStorage.getItem('openModal');
-            if (openModal === 'true') {
-                var modal = document.getElementById('exampleModal');
-                var modal = document.getElementById('exampleModal');
-                var tableContainer = Array.from(document.getElementsByClassName('table-container'))
-                var navbar = Array.from(document.getElementsByClassName('navbar'));
-                var footer = Array.from(document.getElementsByClassName('footer'));
-
-                var elements = [...tableContainer, ...navbar, ...footer];
-
-                var filterLink = document.querySelector('.filter-link');
-                filterLink.style.backgroundColor = 'gray';
-
-                var sidebarWidth = 420; 
-                var tableContainerWidth = 'calc(100% - ' + sidebarWidth + 'px)';
-
-                elements.forEach(function(section) {
-                  section.style.transition = 'all ease';
-                  section.style.width = tableContainerWidth;
-                }); 
-
-
-                modal.style.width = '450px';
-                modal.style.height = '100vh';
-                modal.style.right = '0';
-                modal.style.left = 'auto';
-                modal.style.transition = 'right 0.5s ease';
-                modal.style.display = 'block';
-       
-                localStorage.removeItem('openModal'); // Reset the flag
-            }
-        };
-
         function openRightModal(event) {
-          event.stopPropagation(event);
+          if (event) {
+            event.stopPropagation();
+          }
 
           var filterImage = document.getElementById('filterImage');
-            if (filterImage) {
-                filterImage.src = 'assets/img/icon/gray-filter.png';
-            }
+          if (filterImage) {
+              filterImage.src = 'assets/img/icon/gray-filter.png';
+          }
 
-
+          
           var modal = document.getElementById('exampleModal');
           var tableContainer = Array.from(document.getElementsByClassName('table-container'))
           var navbar = Array.from(document.getElementsByClassName('navbar'));
@@ -359,14 +331,16 @@ var notificationBox = document.getElementById("notificationBox");
           modal.style.left = 'auto';
           modal.style.transition = 'right 0.5s ease';
           modal.style.display = 'block';
+
+          localStorage.setItem('openModal', 'true');         
         }
+       
       
         function closeRightModal() {
-
           var filterImage = document.getElementById('filterImage');
-            if (filterImage) {
-                filterImage.src = 'assets/img/icon/filter.png';
-            }
+          if (filterImage) {
+            filterImage.src = 'assets/img/icon/filter.png';
+          }
 
           var modal = document.getElementById('exampleModal');
           var modal = document.getElementById('exampleModal');
@@ -390,9 +364,6 @@ var notificationBox = document.getElementById("notificationBox");
 
         // Function to close the modal when clicking outside
         function closeRightModalOnClickOutside(event) {
-          
-
-
             var modal = document.getElementById('exampleModal');
             var modalContent = modal.querySelector('.modal-content');
             var isClickInsideModal = modalContent.contains(event.target);

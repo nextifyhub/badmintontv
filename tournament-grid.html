@@ -38,7 +38,7 @@
                           <h3>Notifications</h3><hr>
                           <div class="alert alert-danger alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
                           <div class="alert alert-primary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-                          <div class="alert alert-secondary alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                          <div class="alert alert-danger alert-dismissible fade show">Secondary: This is just secondary <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
                       </div>
                   </li>
                       <li class="nav-item">
@@ -59,17 +59,23 @@
                 <div>
                     <h3 class="text-white">Matches</h3>
                 </div>               
-                <div class=" d-flex align-items-center gap-3">
-                    <a href="tournament.html"><img src="assets/img/icon/List_View.png" alt="" height="36"></a>
-                    <a href="tournament-grid.html"><img src="assets/img/icon/grey-grid-icon.png" alt="" height="36"></a>
+                <div >
+                    
+                    
+                    
+
                     <div style="margin-left: 20px !important;">
 
-                        <!-- Button trigger modal -->
-                       <!-- <a href="#" class="filter-link"><img  onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>  -->
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="tournament.html"><img src="assets/img/icon/List_View.png" alt="" height="36"></a>
+                    <a href="tournament-grid.html"><img src="assets/img/icon/grey-grid-icon.png" alt="" height="36"></a>
 
-                        <div class="filter-link">
+                        <div class="filter-link ms-4">
                             <a href="#"><img id="filterImage" onclick="openRightModal(event)" src="assets/img/icon/Filter.png" alt="" height="36"></a>
                         </div> 
+                        </div>
+
+                        
                         
                         <!-- Modal -->
                         <div id="exampleModal" class="modal">
@@ -625,18 +631,18 @@ var notificationBox = document.getElementById("notificationBox");
 
 
 
-        // navbar icons footer
-
         function openRightModal(event) {
-            event.stopPropagation();
+           
+            if (event) {
+                event.stopPropagation();
+            }
 
             var filterImage = document.getElementById('filterImage');
-    if (filterImage) {
-        filterImage.src = 'assets/img/icon/gray-filter.png'; // Update the image source as per your requirements
-    }
+            if (filterImage) {
+                filterImage.src = 'assets/img/icon/gray-filter.png';
+            }
 
-
-          var modal = document.getElementById('exampleModal');
+            var modal = document.getElementById('exampleModal');
           var videoSections = document.querySelectorAll('.video-section')
           var navbar = Array.from(document.getElementsByClassName('navbar'));
           var icons = Array.from(document.getElementsByClassName('icons'));
@@ -644,8 +650,7 @@ var notificationBox = document.getElementById("notificationBox");
 
           var elements = [...videoSections, ...navbar, ...icons, ...footer];
 
-        //   var filterLink = document.querySelector('.filter-container');
-        //   filterLink.style.backgroundColor = '#e5e5';
+       
 
           var sidebarWidth = 420; 
           var videoSectionWidth = 'calc(100% - ' + sidebarWidth + 'px)';
@@ -660,23 +665,16 @@ var notificationBox = document.getElementById("notificationBox");
           modal.style.right = '0';
           modal.style.left = 'auto';
           modal.style.transition = 'right .5s ease';
-          modal.style.display = 'block';
-
-
-          //   open Modal on page 2
-          localStorage.setItem('openModal', 'true');            
+          modal.style.display = 'block';         
         }
       
         function closeRightModal() {
-          var modal = document.getElementById('exampleModal');
-
-      
+            
+          var modal = document.getElementById('exampleModal');     
           var filterImage = document.getElementById('filterImage');
-            if (filterImage) {
-                filterImage.src = 'assets/img/icon/filter.png';
-            }
-
-        
+          if (filterImage) {
+              filterImage.src = 'assets/img/icon/filter.png';
+          }
 
           var videoSections = document.querySelectorAll('.video-section')
           var navbar = Array.from(document.getElementsByClassName('navbar'));

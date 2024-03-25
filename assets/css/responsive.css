@@ -1,13 +1,47 @@
 
 @media only screen and (max-width: 600px) {
-    .carousel-caption h1{
+
+
+    /* Button  */
+    .slider-btn{
+      width: 40% !important;
+    }
+    .trail-btn{
+      width: 40% !important;
+    }
+
+
+    /* END BUTONN  */
+
+
+    /* Home Page Start */
+      .section{
+        padding: 50px 20px !important;
+      }
+      .section-bg{
+        padding: 50px 20px !important;
+      }
+      .mobile-title{
+        font-size: 1.8rem !important;
+        text-align: center;
+      }
+      .carousel-caption h1{
         font-size: 2.5rem !important;
+      }
+      .carousel-caption{
+        height: 520px;
+      }
+      .home-slider .carousel-item,
+      .home-slider .carousel {
+        height: 520px !important;
+        width: 100%;
+        padding: 0;
+      }
+      .service-box{
+        text-align: center;
       }
       .work-border:before {
         display: none;
-      }
-      .big-title{
-        font-size: 2rem !important;
       }
       .work-border:after {
         display: none;
@@ -38,5 +72,42 @@
       .container-fluid{
         padding:0 20px !important;
       }
+
+      /* Home Page END */
+
+      /* Announcement Page  */
+      .announcement-section {
+        padding: 20px;
+        padding-top: 120px;
+      }
+      .faq-section {
+        padding: 20px;
+        padding-top: 120px;
+      }
+      .terms-of-use-section {
+        padding: 20px;
+        padding-top: 120px;
+      }
+      .subscribe{
+        padding: 130px 20px !important;
+      }
+      .account-section{
+        padding: 120px 15px !important;
+      }
+      .billing-section{
+        padding: 120px 15px !important;
+        height: auto !important;
+      }
+      .membership-section{
+        padding: 120px 15px !important;
+        height: auto !important;
+      }
+      .mobile-paddding{
+        padding: 0 !important;
+      }
+      .bg-container{
+        padding: 20px !important;
+      }
+
   }
 
